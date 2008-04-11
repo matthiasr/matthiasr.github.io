@@ -1,0 +1,13 @@
+[[!meta  title="Cheap is the new fast"]]
+[[!meta  guid="http://www.matthias-rampke.de/?p=83"]]
+[[!meta  date="2008-04-11 10:40:39"]]
+Die Leistung von PCs ist an die Decke gerauscht, jetzt kommen Teile wieder runter.
+
+Seit Jahrzehnten ist die Rechenleistung von Computern im Allgemeinen und Endnutzer-PCs im speziellen ziemlich genau nach <a title="Wikipedia: Mooresches Gesetz" href="http://de.wikipedia.org/wiki/Mooresches_Gesetz">Moore's Law</a> (in der tausendsten Spielart, im Wesentlichen sagen sie ja doch alle das selbe) gewachsen. Inzwischen geraten <a title="Wikipedia: CMOS" href="http://www.matthias-rampke.de">CMOS</a>-Chips an die Grenzen der Physik, d.h. sie k&ouml;nnen nicht mehr unbegrenzt weiter aufgebohrt werden. Als Workaround dienen im Moment Mehrkernprozessoren, d.h. im wesentlichen werden mehr Prozessoren verbaut, um weitere Leistungssteigerungen zu erreichen. Zudem wird im Design herumoptimiert, weshalb moderne 2 GHz-Prozessoren mit 3GHz-Pentium 4 mithalten k&ouml;nnen.
+
+Gleichzeitig passiert aber auch noch etwas anderes: Es gibt eine Ausdifferenzierung der PC-Palette nach unten. Immer mehr wird realisiert, dass man f&uuml;r einen Internet-/Musik-/Video-Computer keine Multi-Gigaflop-Boliden braucht. Stattdessen werden zunehmend kleine, einfache und vor allem billige Maschinen angeboten, die f&uuml;r eben diese Anspr&uuml;che ausreichend sind - ohne dass man die ungenutzten restlichen drei Viertel der Rechenleistung mit bezahlen m&uuml;sste.
+
+Als Beispiel seien hier der Run auf den <a title="Wikipedia: Asus EEE PC" href="http://de.wikipedia.org/wiki/ASUS_Eee_PC">Asus EEE PC</a> und &auml;hnliche Ger&auml;te wie auch die <a title="heise online: Nvidia und VIA kooperieren bei Billig-PC-Plattform" href="http://www.heise.de/newsticker/Nvidia-und-VIA-kooperieren-bei-Billig-PC-Plattform--/meldung/106357/from/rss09">Ank&uuml;ndigung der Zusammenarbeit</a> von NVidia und VIA f&uuml;r eine Billig-PC-Plattform genannt. Inzwischen werden wieder Ger&auml;te verkauft, deren Rechenleistung vor drei Jahren niemand hinter dem Ofen hervorgelockt h&auml;tte - und die Nachfrage ist offensichtlich da. Aber vielleicht ist das auch nur der Trend zum Drittcomputer&hellip;
+
+[[!taglink  Allgemein]]
+[[!taglink  computer]]

@@ -1,0 +1,38 @@
+[[!meta  title="Umgezogen (virtuell)"]]
+[[!meta  guid="http://www.matthias-rampke.de/?p=237"]]
+[[!meta  date="2009-10-01 23:31:06"]]
+Ich habe diese Seite auf einen neuen Server bei einem anderen Hoster umgezogen. Sollten Probleme auftauchen freue ich mich wenn ihr mir kurz Bescheid gebt.
+
+Bei Gelegenheit schreibe ich mal l&auml;nger was zu meinen Erfahrungen auf, bis dahin paste ich hier fix die Mail rein, die ich an den Support meines alten Hosters geschrieben habe:
+
+<blockquote>
+Liebes all-inkl-Team,
+
+vielen Dank f&uuml;r den Hinweis.<sup><a href="FN1" id="rFN1">*</a></sup>
+
+Zu meinem Weggang m&ouml;chte ich noch ein bisschen Feedback geben:
+
+Ich war seit mehr als zwei Jahren Kunde von <a href="http://all-inkl.com/">all-inkl.com</a>, und war in
+dieser Zeit immer sehr mit Ihnen zufrieden. Meine Seite war immer
+schnell und gut zu erreichen, an eine Downtime kann ich mich nicht
+erinnern. Supportanfragen und -w&uuml;nsche wurden zu jeder Tages- und
+Nachtzeit innerhalb von wenigen Minuten beantwortet und umgesetzt.
+Gro&szlig;es Lob daf&uuml;r!
+
+Ich gehe schweren Herzens, weil ich f&uuml;r einige Dinge (IRC, eigener
+Jabber-Server etc.) einen kleinen vServer brauche, auf dem ich bis auf
+weiteres auch das Webhosting machen werde. Ich werde aber in Zukunft
+wie in der Vergangenheit Ihre Dienste herzlichst weiterempfehlen.
+
+Mit Dank & freundlichen Gr&uuml;&szlig;en,
+Matthias Rampke
+
+PS: Sollte all-inkl eines Tages kleine, g&uuml;nstige vServer anbieten,
+w&uuml;rde ich mich &uuml;ber einen Hinweis sehr freuen!
+</blockquote>
+
+<sup><a href="rFN1" id="FN1">*</a></sup> Ich hatte, nachdem alle meine Domains innerhalb von wenigen Stunden anstandslos umgezogen worden waren, noch eine Mail vom Support bekommen, dass zu meinem Vertrag jetzt keine Domains mehr geh&ouml;ren, und wo ich klicken muss um ihn zu k&uuml;ndigen. All-Inkl.com geht nicht nur vorbildlich mit Bestandkunden um, sondern ist selbst beim Wegzug noch freundlich und hilfsbereit. Das hat mich beeindruckt.
+
+[[!taglink  Allgemein]]
+[[!taglink  hosting]]
+[[!taglink  server]]

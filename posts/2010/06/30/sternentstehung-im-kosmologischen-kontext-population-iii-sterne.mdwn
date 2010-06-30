@@ -1,0 +1,13 @@
+[[!meta  title="Sternentstehung im kosmologischen Kontext - Population-III-Sterne"]]
+[[!meta  guid="https://rampke.de/?p=358"]]
+[[!meta  date="2010-06-30 14:24:51"]]
+Hier die Folien zu meinem Vortrag im <a href="http://www-astro.physik.tu-berlin.de/lv/view/426">Astrophysikalischen Seminar</a>:
+
+<iframe src="http://docs.google.com/viewer?url=http%3A%2F%2Frampke.de%2Fwp-content%2Fuploads%2F2010%2F06%2FpopulationIII.pdf&embedded=true" style="width:500px; height:350px; border:0px" class="gde-frame">&nbsp;</iframe>
+
+Folie 15 ist <a href="http://www.youtube.com/watch?v=EzkG-fESxWM">dieses</a> Video.
+
+Direktdownload: <a href='/wp-content/uploads/2010/06/populationIII.pdf' >Pr&auml;sentation</a>, <a href='/wp-content/uploads/2010/06/populationIII-notes.pdf' >mit Notizen</a>, <a href='/wp-content/uploads/2010/06/populationIII.bib' >Bibliographie</a>.
+
+
+[[!taglink  Allgemein]]

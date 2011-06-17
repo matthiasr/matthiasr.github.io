@@ -8,7 +8,7 @@ Skype: matthias.rampke<br  />
 Mobil: 0179 - 166 09 18
 Festnetz: 030 - 555 77 837
 
-<a href="/kontakt.vcf">vCard</a>
+<a href="/data/kontakt.vcf">vCard</a>
 
 
-<a href="/kontakt.vcf"><img src="/kontakt.png"  /></a>
+<a href="/data/kontakt.vcf"><img src="/data/kontakt.png"  /></a>

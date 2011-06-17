@@ -2,6 +2,8 @@
 [[!meta  guid="https://rampke.de/?p=348"]]
 [[!meta  date="2010-04-23 13:46:10"]]
 [[!meta  author="Matthias Rampke"]]
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 Wie so oft via @<a href="https://twitter.com/moeffju/status/12699125197">moeffju</a> bin ich auf eine nette Idee gesto&szlig;en: Ein <a href="http://kottke.org/10/04/clever-train">Zug, der am Bahnhof nicht h&auml;lt</a>, sondern stattdessen nur einen Beiwagen absetzt:
 
 <object type="application/x-shockwave-flash" style="width:480px; height:385px" data="http://www.youtube-nocookie.com/v/p9Ig19gYP9o"><param name="movie" value="http://www.youtube-nocookie.com/v/p9Ig19gYP9o"  /></object>

@@ -1,0 +1,4 @@
+[[!meta title="pages tagged petition"]]
+
+[[!inline pages="tagged(petition)" actions="no" archive="yes"
+feedshow=10]]

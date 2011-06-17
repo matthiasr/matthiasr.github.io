@@ -1,0 +1,4 @@
+[[!meta title="pages tagged system"]]
+
+[[!inline pages="tagged(system)" actions="no" archive="yes"
+feedshow=10]]

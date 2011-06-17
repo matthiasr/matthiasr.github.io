@@ -1,0 +1,4 @@
+[[!meta title="pages tagged tasche"]]
+
+[[!inline pages="tagged(tasche)" actions="no" archive="yes"
+feedshow=10]]

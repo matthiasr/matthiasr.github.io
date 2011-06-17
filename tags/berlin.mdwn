@@ -1,0 +1,4 @@
+[[!meta title="pages tagged berlin"]]
+
+[[!inline pages="tagged(berlin)" actions="no" archive="yes"
+feedshow=10]]

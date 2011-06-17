@@ -1,0 +1,4 @@
+[[!meta title="pages tagged grundeinkommen"]]
+
+[[!inline pages="tagged(grundeinkommen)" actions="no" archive="yes"
+feedshow=10]]

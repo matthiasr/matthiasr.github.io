@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^/kontakt /posts/contact [R=301,L]
+RewriteRule ^/contact /posts/contact [R=301,L]
+RewriteRule ^/20[0-9][0-9]/[01][0-9]/[0-3][0-9]/.*$ /posts$0 [R=301,L]

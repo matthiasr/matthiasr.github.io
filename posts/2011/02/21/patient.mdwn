@@ -1,4 +1,5 @@
 [[!meta  title="Patient"]]
+[[!meta  guid="http://rampke.de/?p=452"]]
 [[!meta  date="2011-02-21 20:47:01"]]
 <h3>1</h3>  
 

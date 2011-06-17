@@ -1,4 +1,5 @@
 [[!meta  title="Bubble Street View"]]
+[[!meta  guid="http://rampke.de/?p=415"]]
 [[!meta  date="2010-09-13 12:47:21"]]
 <img class="wp-image-416 size-full" src="wp-content/uploads/2010/09/streetview-brille.jpg" title="Streetview-Brille" alt="Spiegelung des Streetview-Aufbaus in einer Sonnenbrille" />
 

@@ -1,4 +1,5 @@
 [[!meta  title="So etwas wie eine Kriegserkl&#228;rung. Vielleicht."]]
+[[!meta  guid="http://rampke.de/?p=294"]]
 [[!meta  date="2010-01-13 01:01:45"]]
 <a href="http://www.google.com/">Google</a> wird ab sofort seine chinesische Suchseite <a href="http://googleblog.blogspot.com/2010/01/new-approach-to-china.html">nicht mehr zensieren</a>, weil China offensichtlich organisiert versucht hat, Accounts von Regimegegnern zu hacken. Und Google hat beschlossen, sich das nicht gefallen zu lassen, sondern damit an die &Ouml;ffentlichkeit zu gehen:
 <!--more-->

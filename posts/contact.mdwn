@@ -1,4 +1,5 @@
 [[!meta  title="Kontakt"]]
+[[!meta  guid="http://www.matthias-rampke.de/ueber-mich/kontakt/"]]
 [[!meta  date="2007-09-22 11:04:47"]]
 E-Mail: matthias (et) rampke.de
 
@@ -8,7 +9,7 @@ Skype: matthias.rampke<br  />
 Mobil: 0179 - 166 09 18
 Festnetz: 030 - 555 77 837
 
-<a href="/data/kontakt.vcf">vCard</a>
+<a href="/kontakt.vcf">vCard</a>
 
 
-<a href="/data/kontakt.vcf"><img src="/data/kontakt.png"  /></a>
+<a href="/kontakt.vcf"><img src="/kontakt.png"  /></a>

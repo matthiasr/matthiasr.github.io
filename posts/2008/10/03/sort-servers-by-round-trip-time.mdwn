@@ -1,4 +1,5 @@
 [[!meta  title="Sort servers by round trip time"]]
+[[!meta  guid="http://www.matthias-rampke.de/?p=125"]]
 [[!meta  date="2008-10-03 19:00:04"]]
 A simple (and rather dumb) python script to sort a list of servers by round trip (aka. ping) time: <a href="wp-content/uploads/2008/10/serversort-01a.tbz">serversort 0.1a</a>.
 

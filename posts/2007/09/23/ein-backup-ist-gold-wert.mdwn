@@ -1,4 +1,5 @@
 [[!meta  title="Ein Backup ist Gold wert"]]
+[[!meta  guid="http://www.matthias-rampke.de/2007/09/23/ein-backup-ist-gold-wert/"]]
 [[!meta  date="2007-09-23 18:05:40"]]
 Vorhin: Mac abgest&uuml;rzt (ja, die auch... nobody is perfect). Ich habe Firefox im Verdacht, der ist ein bisschen instabil; bisher hat mich aber noch kein anderer &uuml;berzeugen k&ouml;nnen - und ich hatte sie (fast) alle: Camino, Safari 2, Safari 3 beta, Opera. Nur der IE kann mir von vorneherein gestohlen bleiben...
 

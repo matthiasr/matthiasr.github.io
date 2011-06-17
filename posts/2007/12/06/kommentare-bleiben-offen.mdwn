@@ -1,4 +1,5 @@
 [[!meta  title="Kommentare bleiben offen"]]
+[[!meta  guid="http://www.matthias-rampke.de/2007/12/06/kommentare-bleiben-offen/"]]
 [[!meta  date="2007-12-06 16:44:18"]]
 Bei "brisanten Themen" muss <a href="http://www.stefan-niggemeier.de/blog/callactive-gmbh-niggemeier-ii/">vorsorglich moderiert</a> werden. Sagt das Landgericht Hamburg.
 

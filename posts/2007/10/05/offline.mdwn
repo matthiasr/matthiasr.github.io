@@ -1,4 +1,5 @@
 [[!meta  title="Offline"]]
+[[!meta  guid="http://www.matthias-rampke.de/2007/10/05/offline/"]]
 [[!meta  date="2007-10-05 17:57:36"]]
 Heute 9:27 war es dann so weit: <strike>das Internet</strike> der Internet-Anschluss <strike>unserer</strike> der Vorbewohnerinnen unserer Wohnung wurde abgeschaltet.
 

@@ -1,4 +1,5 @@
 [[!meta  title="HOWTO: Installing grml 1.1 on an encrypted USB stick"]]
+[[!meta  guid="http://www.matthias-rampke.de/?p=94"]]
 [[!meta  date="2008-08-26 00:04:01"]]
 <a href="http://grml.org/">grml</a> is a <a href="http://www.debian.org/">Debian</a> Sid based live Linux aimed at system recovery. It also offers installing to a hard disk while retaining the hardware autodetection. This is how to put a portable Linux on an encrypted USB drive.
 <!--more-->

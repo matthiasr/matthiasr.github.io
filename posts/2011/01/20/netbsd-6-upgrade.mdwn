@@ -1,6 +1,7 @@
 [[!meta  title="NetBSD-6: modules and system upgrades"]]
 [[!meta  guid="http://rampke.de/?p=436"]]
 [[!meta  date="2011-01-20 20:53:58"]]
+[[!meta  author="Matthias Rampke"]]
 NetBSD 6 (which is right now at NetBSD-CURRENT version 5.99.44) will be the next release of the <a href="http://netbsd.org/">NetBSD</a> operating system. Among other <a href="http://www.netbsd.org/changes/changes-6.0.html">changes</a>, the kernel has been heavily <a href="http://www.feyrer.de/NetBSD/blog.html/nb_20090922_2256.html">modularized</a> for some architectures (including i386, but not amd64 &ndash; if you're on 64 bit Intel/AMD, this doesn't concern you (yet), on 32 bit Intel/AMD it does).
 
 In practice, this especially means that your beloved GENERIC kernel won't be bootable in and of itself as it can't read ffs (or any other file system) unless it's modules are present and loaded. The modules are being installed with the userland via <code>./build.sh install=/</code>. The <a href="http://www.netbsd.org/docs/guide/en/index.html">NetBSD Guide</a> <a href="http://www.netbsd.org/docs/guide/en/chap-updating.html#updating-installing">demands</a> installing the userland only <em>after</em> you've booted into the new kernel. We have a problem here.

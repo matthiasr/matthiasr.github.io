@@ -1,6 +1,7 @@
 [[!meta  title="Technikprobleme"]]
 [[!meta  guid="http://www.matthias-rampke.de/2007/10/28/technikprobleme/"]]
 [[!meta  date="2007-10-28 18:23:27"]]
+[[!meta  author="Matthias Rampke"]]
 wegen Umstellung auf PHP5+MySQL5.
 Die Umlaute sind zerhackt; im Theme gibt es irgendwo eine Inkompatibilit&auml;t. Wird schon...
 

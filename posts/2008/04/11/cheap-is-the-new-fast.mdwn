@@ -1,6 +1,7 @@
 [[!meta  title="Cheap is the new fast"]]
 [[!meta  guid="http://www.matthias-rampke.de/?p=83"]]
 [[!meta  date="2008-04-11 10:40:39"]]
+[[!meta  author="Matthias Rampke"]]
 Die Leistung von PCs ist an die Decke gerauscht, jetzt kommen Teile wieder runter.
 
 Seit Jahrzehnten ist die Rechenleistung von Computern im Allgemeinen und Endnutzer-PCs im speziellen ziemlich genau nach <a title="Wikipedia: Mooresches Gesetz" href="http://de.wikipedia.org/wiki/Mooresches_Gesetz">Moore's Law</a> (in der tausendsten Spielart, im Wesentlichen sagen sie ja doch alle das selbe) gewachsen. Inzwischen geraten <a title="Wikipedia: CMOS" href="http://www.matthias-rampke.de">CMOS</a>-Chips an die Grenzen der Physik, d.h. sie k&ouml;nnen nicht mehr unbegrenzt weiter aufgebohrt werden. Als Workaround dienen im Moment Mehrkernprozessoren, d.h. im wesentlichen werden mehr Prozessoren verbaut, um weitere Leistungssteigerungen zu erreichen. Zudem wird im Design herumoptimiert, weshalb moderne 2 GHz-Prozessoren mit 3GHz-Pentium 4 mithalten k&ouml;nnen.

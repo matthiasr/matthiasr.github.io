@@ -1,6 +1,7 @@
 [[!meta  title="Mobil telefonieren in den USA"]]
 [[!meta  guid="http://www.matthias-rampke.de/?p=173"]]
 [[!meta  date="2009-03-19 02:39:21"]]
+[[!meta  author="Matthias Rampke"]]
 In Deutschland mag die Telekom grade nicht den besten Ruf haben, hier (i.e. in/um Boston, MA, USA) ist T-Mobile dien beste L&ouml;sung, um kurzfristig mobil telefonieren zu k&ouml;nnen.
 
 In meinem O<sub>2</sub>-Vertrag kosten anrufen und angerufen werden jeweils 1.56 &euro;/min, abgerechnet wird im Minutentakt. Mein Handy kann mit dem amerikanischen GSM auf 850MHz und 1900MHz umgehen ("quad band"); "tri-band" (ohne 850MHZ) sollte mit Einschr&auml;nkungen auch gehen. SIM-Lock ist nat&uuml;rlich ein No-Go, Handys die mit O<sub>2</sub>-Vertrag kommen haben keinen.

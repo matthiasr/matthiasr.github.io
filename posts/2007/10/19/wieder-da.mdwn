@@ -1,6 +1,7 @@
 [[!meta  title="Wieder da"]]
 [[!meta  guid="http://www.matthias-rampke.de/2007/10/19/wieder-da/"]]
 [[!meta  date="2007-10-19 14:09:03"]]
+[[!meta  author="Matthias Rampke"]]
 Seit gestern geht das Internet wieder.
 
 Es ist viel passiert und eigentlich alles wie immer.

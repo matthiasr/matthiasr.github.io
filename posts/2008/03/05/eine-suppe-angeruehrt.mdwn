@@ -1,6 +1,7 @@
 [[!meta  title="Eine Suppe anger&#252;hrt"]]
 [[!meta  guid="http://www.matthias-rampke.de/2008/03/05/eine-suppe-angeruehrt/"]]
 [[!meta  date="2008-03-05 02:26:21"]]
+[[!meta  author="Matthias Rampke"]]
 Nachdem ich hier den <a href="http://twitter.com">Twitter</a>kram <a href="http://www.matthias-rampke.de/2008/01/30/twitterdurcheinander/">rausgeschmissen</a> habe und inspiriert vom <a href="http://chaosradio.ccc.de/cre072.html">CRE072</a> habe ich mir ein <a href="http://de.wikipedia.org/wiki/Tumblelog">Tumblelog</a> zugelegt. Als technische Basis habe ich der Einfachheit halber dann auch gleich <a href="http://soup.io/">soup.io</a> gew&auml;hlt. Nach ein paar Mails mit dem Support meines <a href="http://www.all-inkl.com/">Lieblingshosters</a> l&auml;uft es jetzt unter
 
 <h4><a href="http://tumble.matthias-rampke.de/">http://tumble.matthias-rampke.de/</a></h4>

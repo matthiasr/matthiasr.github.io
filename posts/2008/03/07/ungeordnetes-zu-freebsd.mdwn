@@ -1,6 +1,7 @@
 [[!meta  title="Ungeordnetes zu FreeBSD"]]
 [[!meta  guid="http://www.matthias-rampke.de/2008/03/07/ungeordnetes-zu-freebsd/"]]
 [[!meta  date="2008-03-07 00:26:26"]]
+[[!meta  author="Matthias Rampke"]]
 Ich habe ein bisschen mit FreeBSD herumgespielt. Weil sich die Installation und was danach kommt ein bisschen anf&uuml;hlt wie Linux Ende der 90-er hier eine (nicht ganz so) kurze Zusammenfassung meiner Erfahrungen und was man dabei so beachten sollte.
 <!--more-->
 

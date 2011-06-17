@@ -1,6 +1,7 @@
 [[!meta  title="Hartz IV+"]]
 [[!meta  guid="http://www.matthias-rampke.de/2007/11/24/hartz-iv/"]]
 [[!meta  date="2007-11-24 20:35:40"]]
+[[!meta  author="Matthias Rampke"]]
 Nun also leider <a href="http://www.tagesschau.de/inland/gruene52.html">doch kein Grundeinkommen</a>.
 
 Die Gr&uuml;nen haben sich f&uuml;r eine Grundsicherung entschieden, die auf Sanktionen weitgehend verzichtet und deutlich h&ouml;her als Hartz&nbsp;IV liegt. Mehr Gewicht legen wir auf einen Ausbau sozialer Institutionen, um das Vererben von Armut zu verhindern.

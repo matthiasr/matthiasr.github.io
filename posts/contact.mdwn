@@ -1,6 +1,7 @@
 [[!meta  title="Kontakt"]]
 [[!meta  guid="http://www.matthias-rampke.de/ueber-mich/kontakt/"]]
 [[!meta  date="2007-09-22 11:04:47"]]
+[[!meta  author="Matthias Rampke"]]
 E-Mail: matthias (et) rampke.de
 
 Jabber: matthias (et) rampke.de<br  />

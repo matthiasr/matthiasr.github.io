@@ -1,6 +1,7 @@
 [[!meta  title="Zensur: ab Donnerstag auch in Ihrer Bundesrepublik"]]
 [[!meta  guid="http://www.matthias-rampke.de/?p=221"]]
 [[!meta  date="2009-06-15 22:56:47"]]
+[[!meta  author="Matthias Rampke"]]
 <object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/Ph-vHNUBUdc&hl=de&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Ph-vHNUBUdc&hl=de&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999&fmt=18" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
 
 <a href="http://www.heise.de/newsticker/Gesetz-zu-Web-Sperren-in-trockenen-Tuechern--/meldung/140461">Das Gesetz zur Internetzensur</a> ist durch und wird am Donnerstag von CDU und SPD im Bundestag beschlossen werden. Dazu hei&szlig;t es:

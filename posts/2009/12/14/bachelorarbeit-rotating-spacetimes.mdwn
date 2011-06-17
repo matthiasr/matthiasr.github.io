@@ -1,6 +1,7 @@
 [[!meta  title="Bachelorarbeit &quot;Rotating Spacetimes&quot;"]]
 [[!meta  guid="http://rampke.de/?p=275"]]
 [[!meta  date="2009-12-14 18:22:43"]]
+[[!meta  author="Matthias Rampke"]]
 Nachdem ich vor einigen Tagen mein <a href="http://twitpic.com/s2zau">Bachelorzeugnis</a> abgeholt habe hier auch nochmal f&uuml;r alle meine Bachelorarbeit.
 
 Thema waren "Rotating Spacetimes", also eine Literaturzusammenstellung und -fassung zu rotierenden Raumzeiten in der <a href="http://de.wikipedia.org/wiki/Allgemeine_Relativit&auml;tstheorie">Allgemeinen Relativit&auml;tstheorie</a>.

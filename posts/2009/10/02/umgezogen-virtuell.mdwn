@@ -1,6 +1,7 @@
 [[!meta  title="Umgezogen (virtuell)"]]
 [[!meta  guid="http://www.matthias-rampke.de/?p=237"]]
 [[!meta  date="2009-10-01 23:31:06"]]
+[[!meta  author="Matthias Rampke"]]
 Ich habe diese Seite auf einen neuen Server bei einem anderen Hoster umgezogen. Sollten Probleme auftauchen freue ich mich wenn ihr mir kurz Bescheid gebt.
 
 Bei Gelegenheit schreibe ich mal l&auml;nger was zu meinen Erfahrungen auf, bis dahin paste ich hier fix die Mail rein, die ich an den Support meines alten Hosters geschrieben habe:

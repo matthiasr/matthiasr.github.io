@@ -1,0 +1,14 @@
+[[!meta  title="Kontakt"]]
+[[!meta  date="2007-09-22 11:04:47"]]
+E-Mail: matthias (et) rampke.de
+
+Jabber: matthias (et) rampke.de<br  />
+Skype: matthias.rampke<br  />
+
+Mobil: 0179 - 166 09 18
+Festnetz: 030 - 555 77 837
+
+<a href="/kontakt.vcf">vCard</a>
+
+
+<a href="/kontakt.vcf"><img src="/kontakt.png"  /></a>

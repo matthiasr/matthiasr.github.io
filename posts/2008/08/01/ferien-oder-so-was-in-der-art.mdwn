@@ -1,0 +1,18 @@
+[[!meta  title="Ferien, oder so was in der Art"]]
+[[!meta  date="2008-08-01 08:14:26"]]
+In letzter Zeit ist hier, nun ja, nicht so wirklich was los gewesen. Daran wird sich auch bis auf weiteres nichts &auml;ndern, weil jetzt erstmal die vorlesungsfreie Zeit und damit so etwas wie Ferien anstehen.
+Und damit alle wissen, wann und wo ich erreichbar bin, hier die Planung im Kurz&uuml;berblick:
+
+2.-9. August: K&uuml;hlungsborn, Urlaub. Voraussichtlich durchgehend offline.<br  />
+12.-16. August: Selb, Urlaub bei der Familie. Internet vorhanden.<br  />
+17.-23. August: M&uuml;nchen, <a href="http://www.dpg-physik.de/gliederung/junge/exkursion/index.html">Sommerexkursion</a> der jungen DPG. Netzzugang unklar.<br  />
+28.-31. August: Frankfurt/Oder, <a href="http://www.green-summer-university.eu/">Green Summer University</a>. 
+
+Im September wird's dann vielleicht auch wieder etwas ruhiger, und ich kann etwas &uuml;ber meine Odyssee mit <a href="http://www.opensolaris.com/">OpenSolaris</a> schreiben.
+
+Au&szlig;erdem habe ich jetzt auch Skype. Erreichbar bin ich da als matthias.rampke.
+
+[[!taglink  Allgemein]]
+[[!taglink  reisen]]
+[[!taglink  skype]]
+[[!taglink  urlaub]]

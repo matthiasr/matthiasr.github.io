@@ -6,7 +6,7 @@
 
 Wie so oft via @<a href="https://twitter.com/moeffju/status/12699125197">moeffju</a> bin ich auf eine nette Idee gesto&szlig;en: Ein <a href="http://kottke.org/10/04/clever-train">Zug, der am Bahnhof nicht h&auml;lt</a>, sondern stattdessen nur einen Beiwagen absetzt:
 
-<object type="application/x-shockwave-flash" style="width:480px; height:385px" data="http://www.youtube-nocookie.com/v/p9Ig19gYP9o"><param name="movie" value="http://www.youtube-nocookie.com/v/p9Ig19gYP9o"  /></object>
+<iframe width="425" height="349" src="https://www.youtube.com/embed/p9Ig19gYP9o" frameborder="0" allowfullscreen></iframe>
 
 Berechtigterweise wird in den YouTube-Kommentaren die Frage gestellt, ob das Anfahren dann nicht wie ein Kanonenschlag die Passagiere im Beiwagen pl&auml;tten w&uuml;rde. Und man studiert ja nun nicht jahrelang Physik, um das unbeantwortet zu lassen, deshalb sei die Rechnung hier mal durchgef&uuml;hrt.
 

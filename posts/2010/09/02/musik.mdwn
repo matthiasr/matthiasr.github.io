@@ -42,12 +42,10 @@ Behaupten iTunes und <a href="http://www.lastfm.de/user/zar_alex/charts?subtype=
 </li>
 <li><strong>Ein Lied, das dich an eine spezielle Begebenheit erinnert</strong><br  />
 <a href="http://www.myvideo.de/watch/622560/Mia_tanz_der_molekuele">Mia: Tanz der Molek&uuml;le</a><br  />
-<object type="application/x-shockwave-flash" style='width:500px;height:350px;' width='500' height='350'><param name='movie' value='http://www.myvideo.de/movie/622560'  /><param name='AllowFullscreen' value='true'  /><param name='AllowScriptAccess' value='always'  /><embed src='http://www.myvideo.de/movie/622560' width='500' height='350' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true'  /></object><br  /><a href='http://www.myvideo.de/watch/622560/Mia_tanz_der_molekuele' title='Mia tanz der molek&uuml;le - MyVideo'>Mia tanz der molek&uuml;le - MyVideo</a><br  />
 Auf der <a href="http://www.leipzig-popup.de/">(POP UP</a> mit <a href="http://www.icantrelaxin.de/">Antideutschen</a> diskutieren, die alle <em>B&ouml;&ouml;&ouml;hse</em> finden die MIA. nicht <em>B&ouml;&ouml;&ouml;hse</em> finden.
 </li>
 <li><strong>Ein Lied, bei dem du am besten entspannen kannst</strong><br  />
 <a href="http://video.google.com/videoplay?docid=-6607567405091643672#">Shakira: Underneath your Clothes</a><br  />
-<embed id="VideoPlayback" src="http://video.google.com/googleplayer.swf?docid=-6607567405091643672&hl=en&fs=true" style="width:500px;height:350px" allowFullScreen="true" allowScriptAccess="always" type="application/x-shockwave-flash"  /><br  />
 Opium f&uuml;r die Ohren.
 </li>
 <li><strong>Ein Lied, das f&uuml;r eine richtig gute Zeit in deinem Leben steht</strong><br  />
@@ -60,7 +58,6 @@ Aus Gr&uuml;nden.
 <a href="http://www.dailymotion.com/video/xslup_toto-africa_fun">Toto: Africa</a>
 </p>
 <p>
-<object type="application/x-shockwave-flash" width="500" height="340"><param name="movie" value="http://www.dailymotion.com/swf/video/xslup?width=500&theme=none&foreground=%23F7FFFD&highlight=%23FFC300&background=%23171D1B&additionalInfos=1&start=&animatedTitle=&autoPlay=0&hideInfos=0"  /><param name="allowFullScreen" value="true"  /><param name="allowScriptAccess" value="always"  /><embed type="application/x-shockwave-flash" src="http://www.dailymotion.com/swf/video/xslup?width=500&theme=none&foreground=%23F7FFFD&highlight=%23FFC300&background=%23171D1B&additionalInfos=1&start=&animatedTitle=&autoPlay=0&hideInfos=0" width="500" height="340" allowfullscreen="true" allowscriptaccess="always"  /></object><br  />
 </p>
 <blockquote cite="http://www.questionablecontent.net/view.php?comic=1735">Seriously it is the best Toto song ever and I will fight you if you say otherwise.</blockquote>
 </li>

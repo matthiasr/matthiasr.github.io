@@ -6,4 +6,4 @@ Ikiwiki bezeichnet sich als _wiki compiler_ – ein Haufen Templates, ein _git_-
 
 PS: Die Kommentare sind dabei leider verlorengegangen. Vielleicht rekonstruiere ich sie bei Gelegenheit noch, momentan bin ich aber zu faul.
 
-PPS: Vermutlich sind viele der alten Posts ziemlich kaputtgegangen, wenn ich irgend was dringend wiederherstellen soll oder Permalinks von damals™ kaputt sind, schreibt mir: <matthias@rampke.de>
+PPS: Vermutlich sind viele der alten Posts ziemlich kaputtgegangen, wenn ich irgend was dringend wiederherstellen soll oder Permalinks von damals™ kaputt sind, [schreibt mir](mailto:matthias@rampke.de).

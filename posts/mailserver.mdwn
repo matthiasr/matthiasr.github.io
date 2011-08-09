@@ -64,7 +64,7 @@ Mail, die lokal zugestellt wird, soll Postfix im Maildir-Format ablegen. Was woh
     matthias  matthias/
     spam    matthias/.Junk/
 
-`archive` entspricht einem zusätzlichen Maildir, in dem jede Mail, die ich bekomme, noch einmal abgelegt wird. Ich bin mit GMail sozialisiert und gewöhnt, dass eine Mail nicht wirklich weg ist, wenn ich sie aus der Inbox lösche. `local` und `matthias` zeigen schlicht auf das Haupt-Maildir. Die Pfade sind relativ; ihre Basis wird in `main.cf` festgelegt.
+`archive` entspricht einem zusätzlichen Maildir, in dem jede Mail, die ich bekomme, noch einmal abgelegt wird. Ich bin mit GMail sozialisiert und gewöhnt, dass eine Mail nicht wirklich weg ist, wenn ich sie aus der Inbox lösche. `local` und `matthias` zeigen schlicht auf das Haupt-Maildir. Die Pfade sind relativ zu `virtual_mailbox_base`.
 
 In `virtual` werden die vielfältigen Weiterleitungen kreuz und quer durch die Weltgeschichte festgelegt:
 

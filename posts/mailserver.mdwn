@@ -140,6 +140,19 @@ Eine letzte Runde Neustarts
 
 und auch der IMAP-Zugriff sollte klappen. (Jetzt ist der Zeitpunkt gekommen, den Mailclient einzurichten und ein paar Testmails hin- und herzuschicken. Immer gut ist auch, die Abläufe per `tail -f /var/log/mail.log` zu beobachten.)
 
+## Roundcube
+
+An Roundcube selbst ist nicht viel zu konfigurieren, ich habe lediglich das `roundcube`-Paket installiert und in die entsprechende Apache-Site
+
+    Alias /mail/program/js/tiny_mce/ /usr/share/tinymce/www/
+    Alias /mail /var/lib/roundcube
+
+eingetragen.
+
+    /etc/init.d/apache2 reload
+
+nicht vergessen.
+
 ## Postgrey
 
 Greylisting ist eine relativ einfache und halbwegs effektive Methode, um zumindest sehr primitiv versendeten Spam abzuhalten: wenn der Absender nicht bekannt ist, wird er erst einmal mit einer temporären Fehlermeldung wieder weggeschickt; korrekterweise probiert er es dann später noch einmal und wird zugelassen. Für die meisten Spammer ist das schon zu viel Aufwand und lohnt sich nicht mehr.

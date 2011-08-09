@@ -161,7 +161,13 @@ Postgrey kommt auf Debian im Paket `postgrey` und ist an sich schon weitgestehen
 
     POSTGREY_OPTS="--unix=/var/spool/postfix/private/postgrey"
 
-geändert.
+geändert. Damit Postgrey dort hin schreiben darf, muss der Benutzer `postgrey` aber noch zur Gruppe `postfix` hinzugefügt werden
+
+    adduser postgrey postfix
+
+und die Verzeichnisrechte angepasst werden
+
+    chmod 770 /var/spool/postfix/private
 
 Nun muss Postgrey nur noch in Postfix eingebunden werden; dazu werden in `/etc/postfix/main.cf` explizit Regeln für den Empfang von E-Mails angegeben:
 

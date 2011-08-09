@@ -37,12 +37,12 @@ Da mein Server eine IPv6-Adresse hat, die auch im DNS steht, musste ich mit `ine
 
 ### Mailboxes und virtuelle Adressen
 
-Das System für virtuelle Adressen gibt es bei Postfix in zwei Ausprägungen:
+Das System für [virtuelle Adressen](http://www.postfix.org/VIRTUAL_README.html) gibt es bei Postfix in zwei Ausprägungen:
 
 1. virtuelle Adressen, aber alle lokalen Benutzer entsprechen UNIX-Nutzerkonten
 2. virtuelle Adressen und virtuelle Mailboxen
 
-Da letzteres mehr Kontrolle bietet, wo die Mails letzten endes abgeworfen werden, habe ich das gewählt. Dazu wird in `main.cf` definiert:
+Da letzteres mehr Kontrolle bietet, wo die Mails letzten Endes abgeworfen werden, habe ich das gewählt. Dazu wird in `main.cf` definiert:
 
     virtual_mailbox_domains = pcre:/etc/postfix/hosts
     virtual_mailbox_base = /var/mail/vhosts
@@ -123,7 +123,7 @@ Die anderen Einstellungen dort können bleiben. In `10-auth.conf` wird festgeleg
 
 Damit ist auch festgelegt, dass ich in meinen Mailprogrammen immer _rampke.de_ als IMAP- und SMTP-Server eintrage, damit sich die Clients nicht über unpassende Zertifikate beschweren. *Achtung:* nicht in allen Android-Versionen ist _StartSSL_ als Certificate Authority eingetragen, mein Telefon beschwert sich also immer bzw. ich muss die Zertifikatsüberprüfung im Mailprogramm abschalten. -_Isebensokammanixmachen_.
 
-Dovecot ist damit schon fertig konfiguriert, aber wir können Postfix jetzt auch Authentifizierung und Verschlüsselung für SMTP-Verbindungen per SASL beibringen. Dazu kommt in `/etc/postfix/main.cf`
+Dovecot ist damit schon fertig konfiguriert, aber wir können Postfix jetzt auch Authentifizierung und Verschlüsselung für SMTP-Verbindungen per [SASL](http://www.postfix.org/SASL_README.html) beibringen. Dazu kommt in `/etc/postfix/main.cf`
 
     smtpd_sasl_type = dovecot
     smtpd_sasl_path = private/auth
@@ -283,7 +283,7 @@ Die `chown`-/`adduser`-Zirkelei ist nötig, damit `sa-learn` auch als Benutzer `
 
 > *Warnung:* Falls Mails von dieser Domain auch über andere SMTP-Server verschickt werden, kann die Deklaration der [Author Domain Signing Practices](http://www.rfc-editor.org/rfc/rfc5617.txt) dazu führen, dass diese mit erhöhter Wahrscheinlichkeit als Spam klassifiziert werden. Google Mail erlaubt, andere Mailadressen (nach Verifikation) als Absender zu verwenden, gibt aber im _Sender:_-Header die GMail-Adresse an und fügt eine DKIM-Signatur für _gmail.com_ bzw. _googlemail.com_ hinzu, so dass die Mails als gültig signiert durchgehen; ich weiß nicht wie das bei anderen Webmail-Diensten ist.
 
-Die Signierung wird durch das Paket `dkim-filter` erledigt. Der DKIM-Dienst spricht dann das (ursprünglich für Sendmail entwickelte) _milter_-Protokoll mit Postfix. Die Einrichtung folgt lose [dieser Anleitung](https://help.ubuntu.com/community/Postfix/DKIM)
+Die Signierung wird durch das Paket `dkim-filter` erledigt. Der DKIM-Dienst spricht dann das (ursprünglich für Sendmail entwickelte) [_milter_](http://www.postfix.org/MILTER_README.html)-Protokoll mit Postfix. Die Einrichtung folgt lose [dieser](https://help.ubuntu.com/community/Postfix/DKIM) und [jener](http://www.howtoforge.com/set-up-dkim-for-multiple-domains-on-postfix-with-dkim-milter-2.8.x-centos-5.3) Anleitung.
 
 Zuerst stelle ich in `/etc/default/dkim-filter` ein, dass die Kommunikation über einen UNIX-Socket laufen soll:
 
@@ -339,4 +339,4 @@ Um DKIM zu testen, kann man eine Mail an <autorespond+dkim@dk.elandsys.com> schi
 
 # Fazit
 
-Einen Mailserver mit allem drum und dran aufsetzen geht, aber ist definitiv nicht einfach. Am längsten hat für mich die Suche nach einer funktionierenden Spamfilterlösung gedauert, alles in allem waren es knapp drei Tage. Beim nächsten Mal geht's dann schneller.
+Einen Mailserver mit allem drum und dran aufsetzen geht, aber ist definitiv nicht einfach. Am längsten hat für mich die Suche nach einer funktionierenden Spamfilterlösung gedauert, alles in allem waren es knapp drei Tage. Beim nächsten Mal geht's dann hoffentlich schneller. Falls irgendwas so nicht stimmt oder nicht funktioniert, mailt mir: <matthias@rampke.de>

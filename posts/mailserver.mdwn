@@ -108,4 +108,61 @@ Noch ein `sudo /etc/init.d/postfix restart` und der Mailserver läuft. Falls etw
 
 ## Dovecot
 
+Zuerst muss Dovecot wissen, wo es die Mails findet; dazu setze ich in `/etc/dovecot/conf.d/10-mail.conf`
 
+    mail_location = maildir:/var/mail/vhosts/%u
+
+Die anderen Einstellungen dort können bleiben. In `10-auth.conf` wird festgelegt, wer sich per IMAP einloggen darf und worüber; bis auf weiteres sollen sich nur Systembenutzer einloggen können, das ist die Standardeinstellung. In `10-ssl.conf` konnte ich wieder SSL-Schlüssel und -Zertifikat eintragen:
+
+    ssl_cert = </etc/ssl/certs/rampke.de.crt
+    ssl_key = </etc/ssl/private/rampke.de.key
+
+Damit ist auch festgelegt, dass ich in meinen Mailprogrammen immer _rampke.de_ als IMAP- und SMTP-Server eintrage, damit sich die Clients nicht über unpassende Zertifikate beschweren. *Achtung:* nicht in allen Android-Versionen ist _StartSSL_ als Certificate Authority eingetragen, mein Telefon beschwert sich also immer bzw. ich muss die Zertifikatsüberprüfung im Mailprogramm abschalten. -_Isebensokammanixmachen_.
+
+Dovecot ist damit schon fertig konfiguriert, aber wir können Postfix jetzt auch Authentifizierung und Verschlüsselung für SMTP-Verbindungen per SASL beibringen. Dazu kommt in `/etc/postfix/main.cf`
+
+    smtpd_sasl_type = dovecot
+    smtpd_sasl_path = private/auth
+    smtpd_sasl_auth_enable = yes
+
+und in `/etc/dovecot/conf.d/10-master.conf` wird im Bereich `service auth` hinzugefügt
+
+    unix_listener /var/spool/postfix/private/auth {
+      mode = 0666
+    }
+
+Derart gegenüber Postfix authentifizierte Clients können dann auch Mails nach außerhalb verschicken.
+
+Eine letzte Runde Neustarts
+
+    /etc/init.d/dovecot restart
+    /etc/init.d/postfix restart
+
+und auch der IMAP-Zugriff sollte klappen. (Jetzt ist der Zeitpunkt gekommen, den Mailclient einzurichten und ein paar Testmails hin- und herzuschicken. Immer gut ist auch, die Abläufe per `tail -f /var/log/mail.log` zu beobachten.)
+
+## Postgrey
+
+Greylisting ist eine relativ einfache und halbwegs effektive Methode, um zumindest sehr primitiv versendeten Spam abzuhalten: wenn der Absender nicht bekannt ist, wird er erst einmal mit einer temporären Fehlermeldung wieder weggeschickt; korrekterweise probiert er es dann später noch einmal und wird zugelassen. Für die meisten Spammer ist das schon zu viel Aufwand und lohnt sich nicht mehr.
+
+Postgrey kommt auf Debian im Paket `postgrey` und ist an sich schon weitgestehend fertig konfiguriert. Da ich aber wollte, dass möglichst alle interne Kommunikation per UNIX-Sockets, nicht per TCP/IP abläuft, habe ich in `/etc/default/postgrey` die `POSTGREY_OPTS` zu
+
+    POSTGREY_OPTS="--unix=/var/spool/postfix/private/postgrey"
+
+geändert.
+
+Nun muss Postgrey nur noch in Postfix eingebunden werden; dazu werden in `/etc/postfix/main.cf` explizit Regeln für den Empfang von E-Mails angegeben:
+
+    smtpd_recipient_restrictions =
+        permit_mynetworks
+        permit_sasl_authenticated
+        reject_unauth_destination
+        check_policy_service unix:private/postgrey
+
+`permit_mynetworks` erlaubt lokalen Benutzern (oder, falls weiter oben geändert, IPs aus bestimmten Subnetzen) den uneingeschränkten Zugriff, also u.A. Mails nach außen zu verschicken. `permit_sasl_authenticated` legt das selbe für per SASL-authentifizierte Verbindungen fest. Sollte keiner dieser Fälle greifen, wird per `reject_unauth_destination` jede Mail, für die sich Postfix nicht explizit (durch Festlegung in `/etc/postfix/hosts`) zuständig fühlt, verworfen. Was dann noch durchkommt, sind also Mails von außen, die empfangen werden sollen – nach dem Greylisting eben.
+
+Mit
+
+    /etc/init.d/postgrey restart
+    /etc/init.d/postfix restart
+
+werden die Änderungen aktiv.

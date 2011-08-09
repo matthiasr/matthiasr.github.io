@@ -1,5 +1,5 @@
-[[!title Mailserver-Setup]]
-[[!author Matthias Rampke]]
+[[!meta title="Mailserver-Setup"]]
+[[!author author="Matthias Rampke"]]
 
 # Das Problem
 

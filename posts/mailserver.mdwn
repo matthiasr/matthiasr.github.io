@@ -1,0 +1,111 @@
+[[!title Mailserver-Setup]]
+[[!author Matthias Rampke]]
+
+# Das Problem
+
+Bisher liefen alle meine Mails über Google Mail, was an sich funktioniert, und ich wollte schon immer wissen wie man so seinen eigenen Mailserver aufsetzt und betreibt. Andererseits hatte ich davor immer einen Heidenrespekt – zurecht. Hier also was ich so rausgefunden und letztenendes getan habe; die ganzen gescheiterten Zwischenschritte werde ich nicht im Detail reproduzieren.
+
+# Die Situation
+
+Ich habe einen eigenen vServer von [Netcup](http://netcup.de/), nicht besonders dicke, aber tut gut seine Dienste. Darüber habe ich bisher schon Web- und Jabberserver betrieben. Es läuft Debian Testing.
+
+Bisher lief auch ein [sendmail](http://sendmail.org/), der die Weiterleitungen (via [virtusertable](http://www.sendmail.com/sm/open_source/tips/virtual_hosting/) einiger @rampke.de-Mailadressen an meine Schwester, meinen Vater und meine Oma erledigt hat. Alles andere wurde via Catch-All-Regeln an meine [Google-Mail-Adresse](mailto:matthias.rampke@googlemail.com) weitergeleitet, auf dem Server selbst fand keine Filterung oder Speicherung statt. Alles in allem ein relativ einfaches Setup, weil die komplette Spamfilterungsproblematik bei den Empfänger\_innen erledigt wird.
+
+# Das neue Setup
+
+Nachdem ich ein bisschen hin- und hergelesen habe bin ich zu dem Schluss gekommen, dass es [postfix](http://www.postfix.org/) als zentraler Mailserver sein soll. Dazu kommen [Dovecot](http://dovecot.org) als IMAP-Server und [Roundcube](http://roundcube.net/) als Webmail-Client sein. Roundcube spricht IMAP mit Dovecot, das auf die [Maildir](http://en.wikipedia.org/wiki/Maildir)s zugreift, die postfix befüllt.
+
+Die Spamfilterung brauchte ein wenig Experimentierung und hat auch am längsten gedauert. Letzten Endes lief es auf [postgrey](http://postgrey.schweikert.ch/) für [Greylisting](http://en.wikipedia.org/wiki/Greylisting) und [SpamAssassin](http://spamassassin.apache.org/) für weitergehende Spamfilterung hinaus. [DSpam](http://www.nuclearelephant.com/) hatte ich kurz am laufen, aber da hat sich beim Training eine mehrere Gigabyte große Datenbank angesammelt – und das pro spamgefilterter Mailadresse, und beim Versuch das einzudämmen habe ich das ganze irgendwie so zerschossen, dass gar nichts mehr ging. [Amavis](http://www.ijs.si/software/amavisd/) braucht unglaublich viel Speicher, was mir dafür, dass es letztlich nur die Anbindung für SpamAssassin sein sollte, doch etwas viel war. [Policyd](http://www.policyd.org/) habe ich nie zum laufen bekommen.
+
+## Postfix
+
+Postfix an sich zu installieren und einzurichten ist relativ einfach. Ich habe die Pakete `postfix`, `postfix-doc` und `postfix-pcre` installiert. Letzteres bringt Unterstützung für [Perl-kompatible reguläre Ausdrücke](http://en.wikipedia.org/wiki/PCRE). Postfix arbeitet viel mit Mappings (etwa: Mails an X@example.com werden weitergeleitet an Y@example.org und den lokalen Benutzer _Z_). Normalerweise werden dafür Hashtables verwendet, die nach jeder Änderung neu kompiliert werden müssen (`postmap <Datei>`) und relativ unflexibel sind; PCRE erlauben genauere Kontrolle was gematcht wird (reguläre Ausdrücke eben) und die eigentliche Quelldatei wird jedes mal auf's neue eingelesen, der Übersetzungsschritt entfällt also. Außerdem wird in verschiedenen Anleitungen zur Einbindung von Filtern so, dass sie nur auf eingehende Mails angewendet werden (etwas der Spamfilter) ein Umweg über eine PCRE-Tabelle gewählt; ob und warum das mit Hashtables nicht geht habe ich nicht untersucht.
+
+Postfix hat zwei Haupt-Konfigurationsdateien: `master.cf` und `main.cf`. `master.cf` gibt an, aus welchen Diensten der gesamte Postfix-Komplex besteht; das umfasst etwa den `smtpd`, der eingehende Mail entgegen nimmt, den `qmgr`, der die internen Mail-Queues verwaltet und einige mehr. Eine ganze Reihe davon ist in Debian schon vorkonfiguriert und die lassen wir auch tunlichst in Ruhe. Nur für den Spamfilter werden wir später noch einen Dienst dort hinzufügen. `main.cf` ist die allgemeine Postfix-Konfigurationsdatei.
+
+### Konfiguration
+
+Die Debian-Standard-`main.cf` ist eine sehr gute Ausgangsbasis. Debian-üblich wird in `/etc/mailname` der für E-Mails relevante Domainname des Systems festgelegt; bei mir ist das _rampke.de_, während der Haupt-Domainname des Servers _2ktfkt.de_ ist. In `/etc/mailname` ist also `rampke.de` eingetragen. Dies wird dann auch von Postfix eingelesen.
+
+Bei `smtpd_tls_cert_file` und `smtpd_tls_key_file` habe ich die Schlüssel- und Zertifikatsdateien eingetragen, die ich mir schon für Mail- und Jabberserver von [StartSSL](https://startssl.com/) geholt hatte. Als `mydestination` habe ich nur `localhost`, weil alle Domains durch virtuelle Benutzer abgedeckt werden sollen.
+
+Da mein Server eine IPv6-Adresse hat, die auch im DNS steht, musste ich mit `inet_protocols = all` auch die IPv6-Unterstützung in Postfix aktivieren.
+
+### Mailboxes und virtuelle Adressen
+
+Das System für virtuelle Adressen gibt es bei Postfix in zwei Ausprägungen:
+
+1. virtuelle Adressen, aber alle lokalen Benutzer entsprechen UNIX-Nutzerkonten
+2. virtuelle Adressen und virtuelle Mailboxen
+
+Da letzteres mehr Kontrolle bietet, wo die Mails letzten endes abgeworfen werden, habe ich das gewählt. Dazu wird in `main.cf` definiert:
+
+    virtual_mailbox_domains = pcre:/etc/postfix/hosts
+    virtual_mailbox_base = /var/mail/vhosts
+    virtual_alias_maps = pcre:/etc/postfix/virtual
+    virtual_mailbox_maps = hash:/etc/postfix/vmailbox
+    virtual_minimum_uid = 1000
+    virtual_uid_maps = hash:/etc/postfix/vmailbox.uids
+    virtual_gid_maps = hash:/etc/postfix/vmailbox.gids
+
+`hosts` verwende ich mit PCRE, da ich auch alle Subdomains erfassen möchte, das sieht dann so aus:
+
+/^(.+\.)?rampke\.de$/ NONE
+/^(.+\.)?2pktfkt\.de$/ NONE
+/^(.+\.)?2pktfkt\.net$/ NONE
+/^(.+\.)?grade\.so$/ NONE
+
+Wenn das nicht nötig ist, genügt auch `virtual_mailbox_domains = /etc/postfix/hosts` und `hosts` ist dann einfach eine Liste der Domainnamen, einer pro Zeile. Das NONE hat keine Funktion, außer hässliche Warnungen im Log zu ruhigzustellen.
+
+Mail, die lokal zugestellt wird, soll Postfix im Maildir-Format ablegen. Was wohin kommt, definiere ich in der Hashtabelle `vmailboxes` – nicht vergessen: nach jeder Änderung mit `postmap vmailboxes` die Datenbank dazu aktualisieren. Das sieht dann so aus:
+
+    archive matthias/.Archive/
+    local   matthias/
+    matthias  matthias/
+    spam    matthias/.Junk/
+
+`archive` entspricht einem zusätzlichen Maildir, in dem jede Mail, die ich bekomme, noch einmal abgelegt wird. Ich bin mit GMail sozialisiert und gewöhnt, dass eine Mail nicht wirklich weg ist, wenn ich sie aus der Inbox lösche. `local` und `matthias` zeigen schlicht auf das Haupt-Maildir. Die Pfade sind relativ; ihre Basis wird in `main.cf` festgelegt.
+
+In `virtual` werden die vielfältigen Weiterleitungen kreuz und quer durch die Weltgeschichte festgelegt:
+
+    /^matthias([+-_].+)?@(.+\.)?rampke\.de$/ matthias.rampke@googlemail.com, matthias, archive
+    /^matthias([+-_].+)?@(.+\.)?2pktfkt\.de$/ matthias.rampke@googlemail.com, matthias, archive
+    /^matthias([+-_].+)?@(.+\.)?2pktfkt\.net$/ matthias.rampke@googlemail.com, matthias, archive
+    /^matthias([+-_].+)?@(.+\.)?grade\.so$/ matthias.rampke@googlemail.com, matthias, archive
+
+    /^.*\+spam@.*$/ spam
+
+    # /etc/aliases
+    /^mailer-daemon@/ postmaster
+    /^postmaster@/ root
+    /^nobody@/ root
+    /^hostmaster@/ root
+    /^usenet@/ root
+    /^news@/ root
+    /^webmaster@/ root
+    /^www@/ root
+    /^ftp@/ root
+    /^abuse@/ root
+    /^noc@/ root
+    /^security@/ root
+    /^root@/ matthias
+    /^m@/ matthias
+    /^clamav@/ root
+
+Der erste Teil legt fest, dass alle Mails, die an _matthias@..._ bei einer meine Domains gehen, in meinem Google-Mail-Postfach, der Inbox und dem Archiv-Maildir abgelegt werden. Der zweite Teil leitet eine Reihe von Standard-Adressen an `matthias` weiter. Was an _spam@rampke.de_ geht wird direkt im Junk-Ordner abgelegt.
+
+In `vmailbox.uids` und `vmailbox.gids` sind die Benutzer-IDs festgelegt, mit denen die Mails in die Mailboxen einsortiert werden:
+
+    matthias    1000
+    local       1000
+    archive     1000
+    spam        1000
+    @rampke.de  65534
+
+65534 ist der Benutzer _nobody_; da sollte niemals Mail ankommen und die soll auch nirgends hingeschrieben werden.
+
+Noch ein `sudo /etc/init.d/postfix restart` und der Mailserver läuft. Falls etwas schiefgegangen ist, steht das in `/var/log/mail.log`.
+
+## Dovecot
+
+

@@ -276,3 +276,67 @@ und in den [GMail-Einstellungen](https://mail.google.com/mail/u/0/#settings/fwda
     deluser spamd matthias
 
 Die `chown`-/`adduser`-Zirkelei ist nötig, damit `sa-learn` auch als Benutzer `spamd` die Mails einlesen kann. Vorsicht mit dem vielen Kaffee! Das kann jetzt alles im Hintergrund weiterlaufen, braucht aber vergleichsweise viel RAM.
+
+## DomainKeys Identified Mail
+
+[DKIM](http://www.dkim.org/) ist ein Verfahren, um durch im DNS hinterlegte öffentliche Schlüssel zu beweisen, dass man berechtigt ist, Mails von einer bestimmten Domain (bspw. `rampke.de`) zu versenden. SpamAssassin bezieht das in die Spam-Bewertung bereits mit ein, hier geht es nun darum, ausgehende Mail zu signieren.
+
+> *Warnung:* Falls Mails von dieser Domain auch über andere SMTP-Server verschickt werden, kann die Deklaration der [Author Domain Signing Practices](http://www.rfc-editor.org/rfc/rfc5617.txt) dazu führen, dass diese mit erhöhter Wahrscheinlichkeit als Spam klassifiziert werden. Google Mail erlaubt, andere Mailadressen (nach Verifikation) als Absender zu verwenden, gibt aber im _Sender:_-Header die GMail-Adresse an und fügt eine DKIM-Signatur für _gmail.com_ bzw. _googlemail.com_ hinzu, so dass die Mails als gültig signiert durchgehen; ich weiß nicht wie das bei anderen Webmail-Diensten ist.
+
+Die Signierung wird durch das Paket `dkim-filter` erledigt. Der DKIM-Dienst spricht dann das (ursprünglich für Sendmail entwickelte) _milter_-Protokoll mit Postfix. Die Einrichtung folgt lose [dieser Anleitung](https://help.ubuntu.com/community/Postfix/DKIM)
+
+Zuerst stelle ich in `/etc/default/dkim-filter` ein, dass die Kommunikation über einen UNIX-Socket laufen soll:
+
+    SOCKET="local:/var/spool/postfix/private/dkim"
+
+und füge `dkim-filter` zur `postfix`-Gruppe hinzu, wie auch schon `postgrey`:
+
+    adduser dkim-filter postfix
+
+Dann erzeuge ich die DKIM-Keys für meine Domains:
+
+    mkdir -p /etc/dkim; cd /etc/dkim
+    for d in 2pktfkt.de 2pktfkt.net rampke.de grade.so; do
+        mkdir $d; cd $d
+        dkim-genkey -t -s mail -d $d
+        mv mail.private mail
+        chmod 0400 mail
+        cd ..
+    done
+
+Die privaten Schlüssel liegen jetzt jeweils in `/etc/dkim/<Domain>/mail`, wobei _mail_ der DKIM-Selektor ist. `dkim-filter` braucht nun eine Liste dieser Schlüssel, die ich in `/etc/dkim/keylist` ablege:
+
+    *@rampke.de:rampke.de:/etc/dkim/rampke.de/mail
+    *@2pktfkt.de:2pktfkt.de:/etc/dkim/2pktfkt.de/mail
+    *@2pktfkt.net:2pktfkt.net:/etc/dkim/2pktfkt.net/mail
+    *@grade.so:grade.so:/etc/dkim/grade.so/mail
+
+Jetzt kann das ganze auch in `/etc/dkim-filter.conf` eingetragen werden:
+
+    UMask                   000
+    Domain                  rampke.de, 2pktfkt.de, 2pktfkt.net, grade.so
+    KeyList                 /etc/dkim/keylist
+
+`UMask 000` ist notwendig, damit Postfix den Socket benutzen kann. Der Rest von `dkim-filter.conf` kann so bleiben. Schlussendlich erzählen wir Postfix in `/etc/postfix/main.cf` noch davon
+
+    milter_default_action = accept
+    milter_protocol = 2
+    smtpd_milters = unix:private/dkim
+    non_smtpd_mitlers = unix:private/dkim
+
+Und starten `dkim-filter` und `postfix` neu
+
+    /etc/init.d/dkim-filter restart
+    /etc/init.d/postfix restart
+
+Von nun an sollten Mails, die über diesen SMTP-Server verschickt werden, signiert sein, d.h. einen `DKIM-Signature:`-Header haben. Damit andere die Signatur auch überprüfen können, muss für jede Domain ein _TXT_-Record `mail._domainkey.<Domain>` eingerichtet werden; was genau da rein muss steht jeweils in `/etc/dkim/<Domain>/mail.txt`. Optional kann auch noch mitgeteilt werden, dass Empfänger erwarten sollen, dass alle Mails von dieser Domain signiert sind; dazu wird im _TXT_-Record für `_adsp._domainkey.<Domain>`
+
+    dkim=all
+
+eingetragen.
+
+Um DKIM zu testen, kann man eine Mail an <autorespond+dkim@dk.elandsys.com> schicken (Betreff und Inhalt egal) und bekommt das Ergebnis der Signaturüberprüfung zurückgemailt.
+
+# Fazit
+
+Einen Mailserver mit allem drum und dran aufsetzen geht, aber ist definitiv nicht einfach. Am längsten hat für mich die Suche nach einer funktionierenden Spamfilterlösung gedauert, alles in allem waren es knapp drei Tage. Beim nächsten Mal geht's dann schneller.

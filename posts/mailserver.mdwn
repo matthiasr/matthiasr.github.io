@@ -189,3 +189,90 @@ Mit
     /etc/init.d/postfix restart
 
 werden die Änderungen aktiv.
+
+## SpamAssassin
+
+Nachdem ich einiges rumprobiert habe hat sich SpamAssassin als einfachste und praktikabelste Lösung rausgestellt. Die Installation erfolgt via dem `spamassassin`-Paket; `spamc` wird gleich als Abhängigkeit mit installiert. Die Einrichtung folgt lose [dieser Anleitung](http://www.debuntu.org/postfix-and-pamassassin-how-to-filter-spam)
+
+### spamd
+
+Zunächst muss in `/etc/default/spamassassin` der _spamd_ aktiviert werden:
+
+    ENABLED=1
+
+SpamAssassin liefert einen Cronjob mit, der täglich aktualisierte Regellisten herunterlädt und die Spamdatenbank aufräumt. Um den zu aktivieren, in der selben Datei
+
+    CRON=1
+
+setzen. _spamd_ soll ebenfalls unter einem eigenen Benutzer laufen, was diesmal von Debian nicht automatisch eingerichtet wird. Also legen wir einen an:
+
+    adduser --system --home /var/lib/spamassassin --disabled-password --no-create-home --group spamd2Adding
+    chown -R spamd:spamd /var/lib/spamassassin
+
+und passen `/etc/default/spamassassin` an
+
+    OPTIONS="--create-prefs --max-children 1 --username spamd --helper-home-dir"
+
+`--max-children 1` begrenzt die Anzahl von Prozessen, die Spamd gleichzeitig startet, auf das Minimum, da jeder davon ziemlich viel Speicher frisst und bei dem Mailaufkommen auf meinem Server das allemal reicht.
+
+An der eigentlichen SpamAssassin-Konfiguration in `/etc/spamassassin` muss erstmal nichts geändert werden.
+
+### Einbindung in Postfix
+
+Um SpamAssassin in Postfix einzubinden, kommt ans Ende von `/etc/postfix/master.cf`
+
+    spamassassin unix -     n       n       -       -       pipe
+        user=spamd argv=/usr/bin/spamc -f -e
+        /usr/sbin/sendmail -oi -f ${sender} ${recipient}
+
+und in die neu anzulegende Datei `/etc/postfix/spamassassin`
+
+    /./ FILTER spamassassin:spamassassin
+
+`/./` ist wieder eine PCRE, die festlegt wann der Spamfilter anspringt. In dieser Variante wird er dann für jede eingehende Mail verwendet, z.B. mit `/^matthias([+-_].+)?@/` nur für die Mails an mich. Im `master.cf`-Eintrag ist festgelegt, dass auch `spamc` als Benutzer `spamd` ausgeführt wird und die gefilterten Mails via `sendmail` wieder in die Verarbeitung eingeschleust werden. `sendmail` wird von Postfix bereitgestellt und fügt die Mails _nach_ allen Filtern ein, es entsteht also keine Endlosschleife.
+
+Zu guter Letzt muss dieser Filter noch in `/etc/postfix/main.cf` eingebunden werden, indem die `smtpd_recipient_restrictions` erweitert werden:
+
+    smtpd_recipient_restrictions =
+        permit_mynetworks
+        permit_sasl_authenticated
+        reject_unauth_destination
+        check_policy_service unix:private/postgrey
+        check_recipient_access pcre:/etc/postfix/spamassassin
+
+### Training
+
+SpamAssassin benutzt auch Bayes-Filter, die mit Spam- und Nicht-Spam-('_Ham_'-)Mails trainiert werden sollten. Dazu braucht man einen vernünftigen Korpus an ebensolchen, etwa den [2006 TREC Public Spam Corpus](http://plg.uwaterloo.ca/~gvcormac/treccorpus06/). Darin sind einige zehntausend Spam- und Ham-Mails enthalten, die wir aber erstmal in verschiedene Ordner auseinandersortieren:
+
+    tar xzf trec06p.tgz
+    cd trec06p/full
+    awk 'BEGIN { print "rm -rf spam ham; mkdir -p ham spam" } /ham.*/ { split($2,a,"/"); print( "ln " $2 " ham/" a[3]a[4]); } /spam.*/ { split($2,a,"/"); print( "ln " $2 " spam/" a[3]a[4]); }' index | sh
+    cd ../..
+
+Die Mails liegen jetzt als einzelne, nummerierte Dateien in `trec06p/full/spam` und `trec06p/full/ham`, nun kann SpamAssassin damit gefüttert werden:
+
+    su spamd -s /bin/sh -c "/usr/bin/sa-learn --ham --progress trec06p/full/ham/"
+    su spamd -s /bin/sh -c "/usr/bin/sa-learn --spam --progress trec06p/full/spam/"
+
+Kaffeepausenzeit. Ich habe zusätzlich auch mittels `getmail` (gleichnamiges Paket) meine Mails von GMail in mein Archiv-Maildir geladen. Dazu kommt in `/home/matthias/.getmail/getmailrc`
+
+    [retriever]
+    type = SimplePOP3SSLRetriever
+    server = pop.gmail.com
+    username = matthias.rampke
+    password = PASSWORT
+
+    [destination]
+    type = Maildir
+    path = /var/mail/vhosts/matthias/.Archive
+
+und in den [GMail-Einstellungen](https://mail.google.com/mail/u/0/#settings/fwdandpop) muss natürlich POP3 für alle Mails aktiviert sein. Dann einfach mit mit `getmail` laden (so sind sie dann auch per IMAP und Roundcube wieder verfügbar) und SpamAssassin damit füttern:
+
+    su matthias -c getmail
+    chmod -R g+r /var/mail/vhosts/matthias/.Archive/new /var/mail/vhosts/matthias/.Archive/cur
+    adduser spamd matthias
+    su spamd -s /bin/sh -c "/usr/bin/sa-learn --ham --progress /var/mail/vhosts/matthias/.Archive/new /var/mail/vhosts/matthias/.Archive/cur"
+    chmod -R g-r /var/mail/vhosts/matthias/.Archive/new /var/mail/vhosts/matthias/.Archive/cur
+    deluser spamd matthias
+
+Die `chown`-/`adduser`-Zirkelei ist nötig, damit `sa-learn` auch als Benutzer `spamd` die Mails einlesen kann. Vorsicht mit dem vielen Kaffee! Das kann jetzt alles im Hintergrund weiterlaufen, braucht aber vergleichsweise viel RAM.

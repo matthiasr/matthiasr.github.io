@@ -3,10 +3,10 @@ VERSION:3.0
 FN:Matthias Rampke
 N:Rampke;Matthias;;;
 EMAIL;TYPE=INTERNET:matthias@rampke.de
-X-JABBER:matthias@rampke.de
 X-SKYPE:matthias.rampke
-TEL;TYPE=CELL:+49(0)179 166 09 18
-ADR;TYPE=HOME:;Soldiner Straße 110\n13359 Berlin\nGermany;;;;;
+X-JABBER:matthias@rampke.de
+TEL;TYPE=CELL:+49 179 166 09 18
+ADR;TYPE=HOME:;Jülicher Straße 3\n13357 Berlin\nGermany;;;;;
 BDAY:1986-04-02
 URL;TYPE=HOME:http\://rampke.de/
 URL;TYPE=HOME:http\://twitter.com/matthiasr

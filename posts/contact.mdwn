@@ -10,7 +10,7 @@ Skype: matthias.rampke
 
 Phone: +49 179 166 09 18
 
-<a href="/kontakt.vcf">vCard</a>
+[[vCard|data/kontakt.vcf]]
 
 
-<a href="/kontakt.vcf"><img src="/kontakt.png"  /></a>
+[[!img data/kontakt.png link=data/kontakt.vcf]]

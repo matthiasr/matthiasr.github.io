@@ -2,10 +2,10 @@
 
 _**Archiv:**_ das hier hatte ich mal in meinen ersten Gehversuch mit [ikiwiki][ikiwiki] gepostet, der inzwischen den Weg alles zeitlichen gegangen ist. Da es aber anscheinend immer noch Menschen gibt, die noch nicht auf CyanogenMod umgestiegen sind, aber es doch mal tun wollen, hab ich das mal wieder ausgegraben. Die Infos da drin, insbesondere die Softwareversionen, sind nicht mehr alle aktuell. Ich fahre im Moment mit [Cyanogenmod 7][cm7], die Builds dazu liegen [hier][cm7builds], die aktuellen Google-Apps-Bündel sind immer auf der [CM7-Seite][cm7] verlinkt. Allerdings ist das Milestone mit CyanogenMod 7 auch ein bisschen überfordert – mit der heute aktuellen Version ([7.1.1][cm711]) geht die Kamera wieder halbwegs, vorher hat sie nach minutenlangem Einfrieren regelmäßig sich oder das ganze System zum Absturz gebracht. Gleichzeitig Musik hören und Google Maps aufrufen geht immer noch nicht. Aber dafür ist es eben der neueste heiße Scheiß :)
 
-[ikiwiki]: http://ikiwiki.info/ ikiwiki
-[cm7]: http://android.doshaska.net/cm7 CyanogenMod 7 für das Milestone
-[cm7builds]: https://github.com/nadlabak/android/downloads Builds von CyanogenMod 7 für das Milestone
-[cm711]: https://github.com/downloads/nadlabak/android/update-cm-7.1.1-Milestone-KANG-signed.zip CyanogenMod 7.1.1 for Milestone
+[ikiwiki]: http://ikiwiki.info/ (ikiwiki)
+[cm7]: http://android.doshaska.net/cm7 (CyanogenMod 7 für das Milestone)
+[cm7builds]: https://github.com/nadlabak/android/downloads (Builds von CyanogenMod 7 für das Milestone)
+[cm711]: https://github.com/downloads/nadlabak/android/update-cm-7.1.1-Milestone-KANG-signed.zip (CyanogenMod 7.1.1 for Milestone)
 
 Diese Anleitung basiert im wesentlichen auf [jener][cm-faq], soll aber weniger (möglichst kein) Vorwissen voraussetzen.
 

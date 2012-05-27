@@ -43,27 +43,37 @@ The first step was getting _pf_ up and running. All in all, the following rulese
 This already includes the rules to make the two VPNs work later on. Also, this ruleset it very lenient when it comes to both outgoing traffic and ICMP – everything is allowed there. I may or may not restrict this further in the future, but for now I mostly needed the NAT capabilities of pf. For some reason I needed to specify IPv4 and IPv6 rules separately, otherwise I'd get no IPv6 traffic out and lists didn't work either. Also, DragonFly's pf seems to have _no state_ as default.
 
 To activate pf, set
+
     pf="YES"
+
 in _/etc/rc.conf_ and load it with
+
     sudo /etc/rc.d/pf start
+
 When changing the ruleset, update it with
+
     sudo /etc/rc.d/pf reload
 
 To get the server to actually do routing, set the sysctl _net.inet.ip.forwarding=1_ both in _/etc/sysctl.conf_ (so it is persistent) and (to avoid rebooting) directly:
+
     sudo sysctl net.inet.ip.forwarding=1
 
 Next up is configuring the VPNs. I decided to create two separate networks, one being NATed through the server to the outside world, one just for connecting to services I don't want to expose publicly on the server (or possibly in the future, other VPN clients).
 
 First, install OpenVPN:
+
     cd /usr/pkgsrc/net/openvpn; bmake install clean
+
 assuming you have [pkgsrc](http://pkgsrc.net/) already set up. Copy _/usr/pkg/share/examples/rc.d/openvpn_ to /usr/pkg/etc/rc.d and set _openvpn_enable="YES"_ in _rc.conf_.
 
 Create the OpenVPN keys using _easy-rsa_. Copy _/usr/pkg/share/openvpn/easy-rsa_ somewhere else, edit _vars_ in that copy to your liking, then run
+
     . ./vars
     ./build-dh
     ./build-ca
     ./build-key-server <server hostname>
     ./build-key <client hostname>
+
 there to create a server and a client certificate. Also generate a TLS Auth key with
     openvpn --genkey --secret ta.key
 and copy the dh????.pem, _<server hostname>.crt_, _ca.crt_ and _ta.key_ to _/usr/pkg/etc/openvpn_. If your client is a Mac with [Tunnelblick](http://code.google.com/p/tunnelblick/), copy the client certificate, client key, _ta.key_ and _ca.crt_ into a folder called _<server name>.tblk_ along with this configuration file (call it _config.ovpn_):

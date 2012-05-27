@@ -1,3 +1,6 @@
+[[!meta title="DIY VPN with DragonFly, PF and OpenVPN"]]
+[[!meta author="Matthias Rampke"]]
+
 I have a server running [DragonFly](http://dragonflybsd.org) that I wanted to use as a VPN endpoint so I no longer have to rely on third-party VPNs jsut to get out of an insecure WiFi. These instructions, as they stand, will probably only work on Dragonfly ([NAT](http://en.wikipedia.org/NAT) syntax changed in OpenBSD recently; DragonFly uses [pf](http://www.openbsd.org/faq/pf/) from OpenBSD 4.4, FreeBSD 9 uses pf from OpenBSD 4.5).
 
 The first step was getting _pf_ up and running. All in all, the following ruleset worked for me:

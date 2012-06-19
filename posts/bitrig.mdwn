@@ -13,3 +13,5 @@ When booting from the [installer CD](http://mirror1.us.bitrig.org/release/snapsh
 This has to be done after the disk setup so the filesystems are already created and mounted.
 
 and installation will continue. Choose _http_ as install source and enter the server name _mirror1.us.bitrig.org_. It complained about the SHA256 sums of the downloaded files not matching what is expected, but it worked anyway.
+
+EDIT: Snapshots seem to be gone, can't find any currently. Dunno what's up with that…

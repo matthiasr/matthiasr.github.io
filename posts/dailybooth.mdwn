@@ -1,4 +1,4 @@
 [[!meta title="DailyBooth"]]
 [[!meta author="Matthias Rampke"]]
 
-[DailyBooth](http://dailybooth.com/) is going down. [Here](dailybooth/index.html) is the dump of my posts there.
+[DailyBooth](http://dailybooth.com/) is going down. [Here](dailybooth-matthiasr/index.html) is the dump of my posts there.

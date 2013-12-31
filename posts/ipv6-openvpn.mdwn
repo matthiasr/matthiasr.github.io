@@ -1,0 +1,176 @@
+[[!meta Title="OpenVPN with IPv6 and OpenBSD on a cheap VPS"]]
+
+One day after the [Kongress](https://events.ccc.de/congress/2013/wiki/Main_Page) I finally finished my VPN setup. The problem with most "standard" VPN setups (including mine when I went to Hamburg) is that they are IPv4 only, leaving your IPv6 traffic unencrypted unless you [block it](https://gist.github.com/scy/8122924) completely. OpenVPN finally supports IPv6 over TUN devices [as of 2.3.0](https://community.openvpn.net/openvpn/wiki/IPv6).
+
+I have a cheap VPS from [Netcup](http://www.netcup.de/). Since they moved to KVM installing any OS is relatively easy, for this machine I chose [OpenBSD](http://openbsd.org/). The setup should be similar on [FreeBSD](http://freebsd.org) and [DragonFly](http://dragonflybsd.org) since they also have [PF](http://en.wikipedia.org/wiki/PF_(firewall)), although their PF version may be older and the syntax therefore slightly different.
+
+Netcup provide one IPv6 /64, but setting up IPv6 for OpenVPN requires a separate network block for the upstream internet connection and the VPN. One option is [buying another /64](http://www.netcup.de/bestellen/produkt.php?produkt=525), but this is relatively expensive (given the whole VPS is less than 10EUR/month) and requires a fax. Instead I used a [SiXXS](http://sixxs.net) tunnel where IPv6 addresses are free. IPv6 traffic for the VPS itself uses the native IPv6.
+
+# Prerequisites
+
+* a Netcup VPS with OpenBSD (5.4 or higher, otherwise OpenVPN is too old) and working networking
+* a client (tested with Debian Wheezy)
+
+# SiXXS setup
+
+If you do not already have a SixXS account, sign up and request a tunnel and extra subnet. Let the subnet be routed to the tunnel. _Note_ if you're signing up new, your tunnel may need to be up for a while so you have sufficient ISK to request a subnet.
+
+Set the tunnel to 6in4-static and enter the IPv4 address of your server. Set the MTU to 1480, 6in4 has less overhead than the other methods. On the server, add `/etc/hostname.gif0`:
+
+    tunnel <server IPv4> <PoP IP>
+    inet6 <Your IPv6> 128
+    dest <PoP IPv6>
+    mtu 1480
+    group egress
+
+Bring it up with
+
+    # sh /etc/netstart gif0
+
+your should now be able to `ping6 <PoP IPv6>`. Note that we did _not_ add a default route to this interface, so normal IPv6 traffic will still use your VPS' native connection (try `ping6 sixxs.net`).
+
+# VPN setup
+
+### DNS recursor
+
+To send all DNS requests through the VPN, set up a [DNS recursor](http://unbound.net/). To install it
+
+    # pkg_add unbound
+
+and make sure the VPN can access the DNS recursor. To do this, look for the `access-control:` lines in `/var/unbound/unbound.conf` and add
+
+    access-control: 10.8.0.0/16 allow
+    access-control: <your SixXS subnet> allow
+
+To have it started, add the following lines to `/etc/rc.conf.local`:
+
+    syslogd_flags="${syslogd_flags} -a /var/unbound/dev/log"
+    unbound_flags=""
+    pkg_scripts="${pkg_scripts} unbound"
+
+Then restart syslogd and start unbound
+
+    # /etc/rc.d/syslogd restart
+    # /etc/rc.d/unbound start
+
+
+## OpenVPN
+
+Install OpenVPN:
+
+    # pkg_add openvpn
+
+Generate keys following the [HOWTO](http://openvpn.net/index.php/open-source/documentation/howto.html#pki). Create `/etc/openvpn/tun0.conf`:
+
+    port 1194
+    proto tcp # or udp, then change client config accordingly
+    dev tun0
+    # generate following the PKI howto
+    ca ca.crt
+    cert server.crt
+    key server.key  # This file should be kept secret
+    dh dh4096.pem # I use 4096-bit stuff
+    server 10.8.0.0 255.255.255.0 # the IPv4 VPN range
+    server-ipv6 <your SixXS subnet>
+    push "route-ipv6 2000::/3" # route internet traffic through the VPN
+    ifconfig-pool-persist ipp.txt
+    push "redirect-gateway def1 bypass-dhcp"
+    push "dhcp-option DNS 10.8.0.1"
+    client-to-client
+    duplicate-cn
+    keepalive 10 120
+    tls-auth ta.key 0 # This file is secret
+    comp-lzo
+    user _openvpn
+    group _openvpn
+    persist-key
+    persist-tun
+    status /var/log/openvpn-status.log
+    log-append  /var/log/openvpn.log
+    verb 3
+
+Create `/etc/hostname.tun0`:
+
+    up
+    !cd /etc/openvpn; /usr/local/sbin/openvpn --config tun0.conf --daemon openvpn/tun0
+    group vpn
+
+Enable IPv4 and IPv6 forwarding in `/etc/sysctl.conf`
+
+    net.inet.ip.forwarding=1
+    net.inet6.ip6.forwarding=1
+
+and for the running system run
+
+    # sysctl net.inet.ip.forwarding=1
+    # sysctl net.inet6.ip6.forwarding=1
+
+Set the following in `/etc/pf.conf`
+
+    set block-policy return
+    set skip on lo
+
+    # NAT for IPv4 VPN
+    match out on egress from 10.8.0.0/16 to any nat-to egress:0
+
+    # default rules
+    block in
+    pass out
+
+    # normal traffic rules
+    block in on egress
+    # allow SSH
+    pass in on egress proto tcp from any to (egress) port 22
+    pass in proto icmp
+    pass in proto icmp6
+    pass in on vpn
+
+    # OpenVPN
+    pass in on egress proto { tcp udp } from any to (egress) port 1194
+    pass in on egress proto tcp from any to (egress) port 443 rdr-to localhost port 1194
+
+    # IPv6 routing for VPN
+    pass in on vpn from <your SixXS IPv6 block> to ! (egress) route-to (gif0 <PoP IPv6>)
+
+Adjust the last line to your SixXS blocks. It makes sure that IPv6 traffic from the VPN is routed out through SixXS. Incoming traffic is not allowed, if you want this add a line like
+
+    pass in on gif0 from any to <your IPv6 block> <further limits> route-to (tun0 <Your IPv6>)
+
+(untested).
+
+Load the firewall configuration with
+
+    # pfctl -f /etc/pf.conf
+
+and bring the VPN up with
+
+    # sh /etc/netstart tun0
+
+You should now be able to connect to it. The client configuration is nothing special:
+
+    client
+    dev tun
+    proto tcp
+    remote <your server> 1194
+    resolv-retry infinite
+    nobind
+    persist-key
+    persist-tun
+    ca ca.crt
+    cert client.crt
+    key client.key
+    ns-cert-type server
+    tls-auth ta.key 1
+    comp-lzo
+    verb 3
+
+    # Debian/Ubuntu: set name server
+    script-security 2
+    up /etc/openvpn/update-resolv-conf
+    down /etc/openvpn/update-resolv-conf
+
+If your client has OpenVPN 2.3 or higher, IPv6 will be set up correctly now. Try
+
+    # ping6 sixxs.net
+
+on the client.

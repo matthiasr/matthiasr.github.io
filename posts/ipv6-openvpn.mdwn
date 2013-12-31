@@ -1,4 +1,4 @@
-[[!meta Title="OpenVPN with IPv6 and OpenBSD on a cheap VPS"]]
+[[!meta title="OpenVPN with IPv6 and OpenBSD on a cheap VPS"]]
 
 One day after the [Kongress](https://events.ccc.de/congress/2013/wiki/Main_Page) I finally finished my VPN setup. The problem with most "standard" VPN setups (including mine when I went to Hamburg) is that they are IPv4 only, leaving your IPv6 traffic unencrypted unless you [block it](https://gist.github.com/scy/8122924) completely. OpenVPN finally supports IPv6 over TUN devices [as of 2.3.0](https://community.openvpn.net/openvpn/wiki/IPv6).
 

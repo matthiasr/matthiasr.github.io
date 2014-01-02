@@ -54,7 +54,7 @@ Then restart syslogd and start unbound
     # /etc/rc.d/unbound start
 
 
-## OpenVPN
+## OpenVPN and system configuration
 
 Install OpenVPN:
 
@@ -132,11 +132,14 @@ Set the following in `/etc/pf.conf`
     # IPv6 routing for VPN
     pass in on vpn from <your SixXS IPv6 block> to ! (egress) route-to (gif0 <PoP IPv6>)
 
-Adjust the last line to your SixXS blocks. It makes sure that IPv6 traffic from the VPN is routed out through SixXS. Incoming traffic is not allowed, if you want this add a line like
+    # allow incoming tunnel traffic
+    pass in on egress proto 41 from <PoP IPv4> to (egress)
+
+Adjust the last lines to your SixXS blocks. It makes sure that IPv6 traffic from the VPN is routed out through SixXS. Incoming traffic is not allowed, if you want this add a line like
 
     pass in on gif0 from any to <your IPv6 block> <further limits> route-to (tun0 <Your IPv6>)
 
-(untested).
+(untested). Incoming Proto41 traffic on the other hand is explicitly allowed, otherwise the packets never make it to the `gif` interface unless there has been outgoing traffic recently which [created an entry](https://www.sixxs.net/faq/connectivity/?faq=conntracking) in the state table.
 
 Load the firewall configuration with
 
@@ -174,3 +177,7 @@ If your client has OpenVPN 2.3 or higher, IPv6 will be set up correctly now. Try
     # ping6 sixxs.net
 
 on the client.
+
+# Edits
+
+* Added the `pass in proto 41` line. This is [necessary](https://www.sixxs.net/faq/connectivity/?faq=conntracking) so the tunnel can work even if the VPN is not in use.

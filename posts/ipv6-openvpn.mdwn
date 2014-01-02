@@ -127,7 +127,6 @@ Set the following in `/etc/pf.conf`
 
     # OpenVPN
     pass in on egress proto { tcp udp } from any to (egress) port 1194
-    pass in on egress proto tcp from any to (egress) port 443 rdr-to localhost port 1194
 
     # IPv6 routing for VPN
     pass in on vpn from <your SixXS IPv6 block> to ! (egress) route-to (gif0 <PoP IPv6>)
@@ -181,3 +180,4 @@ on the client.
 # Edits
 
 * Added the `pass in proto 41` line. This is [necessary](https://www.sixxs.net/faq/connectivity/?faq=conntracking) so the tunnel can work even if the VPN is not in use.
+* removed redirection of port 443, it's not relevant to this

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2010/09/13/bubble-street-view/"
+guid: "http://rampke.de/posts/2010/09/13/bubble-street-view/"
 title: "Bubble Street View"
 guid: "http://rampke.de/?p=415"
 date: "2010-09-13 12:47:21"

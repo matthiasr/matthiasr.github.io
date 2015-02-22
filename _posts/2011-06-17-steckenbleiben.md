@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2010/02/14/steckenbleiben/"
+guid: "http://rampke.de/posts/2010/02/14/steckenbleiben/"
 title: "Steckenbleiben"
 guid: "http://rampke.de/?p=327"
 date: "2010-02-14 19:43:19"

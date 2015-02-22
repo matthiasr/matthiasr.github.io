@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/03/19/stichpunkte-zum-reisetag/"
+guid: "http://rampke.de/posts/2009/03/19/stichpunkte-zum-reisetag/"
 title: "Stichpunkte zum Reisetag"
 guid: "http://www.matthias-rampke.de/?p=177"
 date: "2009-03-19 03:48:13"

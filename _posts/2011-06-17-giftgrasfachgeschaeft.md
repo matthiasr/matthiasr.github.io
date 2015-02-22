@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/04/11/giftgrasfachgeschaeft/"
+guid: "http://rampke.de/posts/2008/04/11/giftgrasfachgeschaeft/"
 title: "Giftgrasfachgesch&#228;ft!?"
 guid: "http://www.matthias-rampke.de/?p=84"
 date: "2008-04-11 10:53:42"

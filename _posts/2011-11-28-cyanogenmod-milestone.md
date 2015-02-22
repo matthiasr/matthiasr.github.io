@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/cyanogenmod-milestone/"
+guid: "http://rampke.de/posts/cyanogenmod-milestone/"
 ---
 {% include JB/setup %}
 

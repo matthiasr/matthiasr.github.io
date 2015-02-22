@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/04/11/cheap-is-the-new-fast/"
+guid: "http://rampke.de/posts/2008/04/11/cheap-is-the-new-fast/"
 title: "Cheap is the new fast"
 guid: "http://www.matthias-rampke.de/?p=83"
 date: "2008-04-11 10:40:39"

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/01/12/meine-stadt/"
+guid: "http://rampke.de/posts/2009/01/12/meine-stadt/"
 title: "Meine Stadt"
 guid: "http://www.matthias-rampke.de/?p=146"
 date: "2009-01-12 18:20:09"

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/03/07/ungeordnetes-zu-freebsd/"
+guid: "http://rampke.de/posts/2008/03/07/ungeordnetes-zu-freebsd/"
 title: "Ungeordnetes zu FreeBSD"
 guid: "http://www.matthias-rampke.de/2008/03/07/ungeordnetes-zu-freebsd/"
 date: "2008-03-07 00:26:26"

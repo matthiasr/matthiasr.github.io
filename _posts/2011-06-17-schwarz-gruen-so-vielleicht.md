@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/03/07/schwarz-gruen-so-vielleicht/"
+guid: "http://rampke.de/posts/2008/03/07/schwarz-gruen-so-vielleicht/"
 title: "Schwarz-Gr&#252;n: So vielleicht"
 guid: "http://www.matthias-rampke.de/2008/03/07/schwarz-gruen-so-vielleicht/"
 date: "2008-03-07 19:31:21"

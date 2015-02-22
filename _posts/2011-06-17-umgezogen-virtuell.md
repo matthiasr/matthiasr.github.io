@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/10/02/umgezogen-virtuell/"
+guid: "http://rampke.de/posts/2009/10/02/umgezogen-virtuell/"
 title: "Umgezogen (virtuell)"
 guid: "http://www.matthias-rampke.de/?p=237"
 date: "2009-10-01 23:31:06"

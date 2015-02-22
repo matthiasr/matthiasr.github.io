@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/irssi-as-a-service/"
+guid: "http://rampke.de/posts/irssi-as-a-service/"
 title: "Running irssi as an interactive service"
 ---
 {% include JB/setup %}

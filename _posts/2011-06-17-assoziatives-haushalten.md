@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2010/02/07/assoziatives-haushalten/"
+guid: "http://rampke.de/posts/2010/02/07/assoziatives-haushalten/"
 title: "Assoziatives Haushalten"
 guid: "http://rampke.de/?p=310"
 date: "2010-02-07 16:13:48"

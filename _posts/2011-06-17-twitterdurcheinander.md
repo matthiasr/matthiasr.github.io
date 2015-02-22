@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/01/30/twitterdurcheinander/"
+guid: "http://rampke.de/posts/2008/01/30/twitterdurcheinander/"
 title: "Twitterdurcheinander"
 guid: "http://www.matthias-rampke.de/2008/01/30/twitterdurcheinander/"
 date: "2008-01-30 21:52:07"

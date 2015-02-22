@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/12/08/jdpg-regionalgruppe-leipzig/"
+guid: "http://rampke.de/posts/2008/12/08/jdpg-regionalgruppe-leipzig/"
 title: "jDPG-Regionalgruppe Leipzig"
 guid: "http://www.matthias-rampke.de/?p=144"
 date: "2008-12-08 15:14:57"

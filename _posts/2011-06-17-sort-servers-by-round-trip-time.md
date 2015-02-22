@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/10/03/sort-servers-by-round-trip-time/"
+guid: "http://rampke.de/posts/2008/10/03/sort-servers-by-round-trip-time/"
 title: "Sort servers by round trip time"
 guid: "http://www.matthias-rampke.de/?p=125"
 date: "2008-10-03 19:00:04"

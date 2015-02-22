@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/04/08/rucola-mit-tofu-balsamico-sauce/"
+guid: "http://rampke.de/posts/2009/04/08/rucola-mit-tofu-balsamico-sauce/"
 title: "Rucola mit Tofu-Balsamico-Sauce"
 guid: "http://www.matthias-rampke.de/?p=191"
 date: "2009-04-08 18:56:41"

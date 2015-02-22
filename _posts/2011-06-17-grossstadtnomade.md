@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/12/03/grossstadtnomade/"
+guid: "http://rampke.de/posts/2008/12/03/grossstadtnomade/"
 title: "Gro&#223;stadtnomade"
 guid: "http://www.matthias-rampke.de/?p=140"
 date: "2008-12-03 21:41:02"

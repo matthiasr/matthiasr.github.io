@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/ipv6-openvpn/"
+guid: "http://rampke.de/posts/ipv6-openvpn/"
 title: "OpenVPN with IPv6 and OpenBSD on a cheap VPS"
 guid: http://rampke.de/posts/ipv6-openvpn
 ---

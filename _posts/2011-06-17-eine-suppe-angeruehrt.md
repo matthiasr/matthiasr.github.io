@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/03/05/eine-suppe-angeruehrt/"
+guid: "http://rampke.de/posts/2008/03/05/eine-suppe-angeruehrt/"
 title: "Eine Suppe anger&#252;hrt"
 guid: "http://www.matthias-rampke.de/2008/03/05/eine-suppe-angeruehrt/"
 date: "2008-03-05 02:26:21"

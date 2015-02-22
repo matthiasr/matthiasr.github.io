@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/03/09/reisevorbereitungen/"
+guid: "http://rampke.de/posts/2009/03/09/reisevorbereitungen/"
 title: "Reisevorbereitungen"
 guid: "http://www.matthias-rampke.de/?p=159"
 date: "2009-03-09 20:01:37"

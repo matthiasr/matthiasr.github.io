@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/06/16/zensur-ab-donnerstag-auch-in-ihrer-bundesrepublik/"
+guid: "http://rampke.de/posts/2009/06/16/zensur-ab-donnerstag-auch-in-ihrer-bundesrepublik/"
 title: "Zensur: ab Donnerstag auch in Ihrer Bundesrepublik"
 guid: "http://www.matthias-rampke.de/?p=221"
 date: "2009-06-15 22:56:47"

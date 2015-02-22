@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/08/11/alles-veraendert-sich-wenn-du-dich-veraenderst/"
+guid: "http://rampke.de/posts/2009/08/11/alles-veraendert-sich-wenn-du-dich-veraenderst/"
 title: "Alles ver&#228;ndert sich, wenn du dich ver&#228;nderst"
 guid: "http://www.matthias-rampke.de/?p=231"
 date: "2009-08-11 19:56:48"

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/11/03/29-bundeskongress-der-gruenen-jugend/"
+guid: "http://rampke.de/posts/2007/11/03/29-bundeskongress-der-gruenen-jugend/"
 title: "29. Bundeskongress der Gr&#252;nen Jugend"
 guid: "http://www.matthias-rampke.de/2007/11/03/29-bundeskongress-der-gruenen-jugend/"
 date: "2007-11-03 13:40:13"

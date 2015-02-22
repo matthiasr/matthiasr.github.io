@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/12/14/bachelorarbeit-rotating-spacetimes/"
+guid: "http://rampke.de/posts/2009/12/14/bachelorarbeit-rotating-spacetimes/"
 title: "Bachelorarbeit &quot;Rotating Spacetimes&quot;"
 guid: "http://rampke.de/?p=275"
 date: "2009-12-14 18:22:43"

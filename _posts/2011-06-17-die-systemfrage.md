@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/01/10/die-systemfrage/"
+guid: "http://rampke.de/posts/2008/01/10/die-systemfrage/"
 title: "Die Systemfrage"
 guid: "http://www.matthias-rampke.de/2008/01/10/die-systemfrage/"
 date: "2008-01-10 17:56:08"

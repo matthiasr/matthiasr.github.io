@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/09/23/ein-backup-ist-gold-wert/"
+guid: "http://rampke.de/posts/2007/09/23/ein-backup-ist-gold-wert/"
 title: "Ein Backup ist Gold wert"
 guid: "http://www.matthias-rampke.de/2007/09/23/ein-backup-ist-gold-wert/"
 date: "2007-09-23 18:05:40"

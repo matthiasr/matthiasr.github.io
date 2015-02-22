@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/11/15/ich-bin-basis/"
+guid: "http://rampke.de/posts/2008/11/15/ich-bin-basis/"
 title: "Ich bin Basis"
 guid: "http://www.matthias-rampke.de/?p=137"
 date: "2008-11-15 18:20:00"

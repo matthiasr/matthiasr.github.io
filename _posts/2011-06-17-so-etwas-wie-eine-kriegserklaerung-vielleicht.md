@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2010/01/13/so-etwas-wie-eine-kriegserklaerung-vielleicht/"
+guid: "http://rampke.de/posts/2010/01/13/so-etwas-wie-eine-kriegserklaerung-vielleicht/"
 title: "So etwas wie eine Kriegserkl&#228;rung. Vielleicht."
 guid: "http://rampke.de/?p=294"
 date: "2010-01-13 01:01:45"

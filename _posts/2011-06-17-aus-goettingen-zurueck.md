@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/09/23/aus-goettingen-zurueck/"
+guid: "http://rampke.de/posts/2007/09/23/aus-goettingen-zurueck/"
 title: "Aus G&#246;ttingen zur&#252;ck"
 guid: "http://www.matthias-rampke.de/2007/09/23/aus-goettingen-zurueck/"
 date: "2007-09-23 16:07:21"

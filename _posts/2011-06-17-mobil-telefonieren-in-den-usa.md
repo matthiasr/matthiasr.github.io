@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/03/19/mobil-telefonieren-in-den-usa/"
+guid: "http://rampke.de/posts/2009/03/19/mobil-telefonieren-in-den-usa/"
 title: "Mobil telefonieren in den USA"
 guid: "http://www.matthias-rampke.de/?p=173"
 date: "2009-03-19 02:39:21"

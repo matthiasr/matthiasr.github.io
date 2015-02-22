@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/realnamenzwang/"
+guid: "http://rampke.de/posts/realnamenzwang/"
 title: "Realnamenzwang oder: Wie heißt du eigentlich im Internet?"
 author: "Matthias Rampke"
 ---

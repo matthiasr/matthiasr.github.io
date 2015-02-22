@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/08/05/kopf-sucht-dach/"
+guid: "http://rampke.de/posts/2009/08/05/kopf-sucht-dach/"
 title: "Kopf sucht Dach"
 guid: "http://www.matthias-rampke.de/?p=225"
 date: "2009-08-05 02:30:56"

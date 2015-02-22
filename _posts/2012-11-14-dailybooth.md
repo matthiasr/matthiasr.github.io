@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/dailybooth/"
+guid: "http://rampke.de/posts/dailybooth/"
 title: "DailyBooth"
 author: "Matthias Rampke"
 ---

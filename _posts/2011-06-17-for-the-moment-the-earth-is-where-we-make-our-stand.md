@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/11/10/for-the-moment-the-earth-is-where-we-make-our-stand/"
+guid: "http://rampke.de/posts/2009/11/10/for-the-moment-the-earth-is-where-we-make-our-stand/"
 title: "For the moment the Earth is where we make our stand"
 guid: "http://www.matthias-rampke.de/?p=249"
 date: "2009-11-10 22:50:49"

@@ -2,9 +2,11 @@
 
 SCRIPT=$(cat <<'EOF'
 BEGINFILE {
+  old_slug = gensub(/\.mdwn$/,"",1, FILENAME)
   print "---"
   print "layout: post"
-  print "redirect_from: \"" gensub(/\.mdwn$/,"",1, FILENAME) "/\""
+  print "redirect_from: \"" old_slug "/\""
+  print "guid: \"http://rampke.de/" old_slug "/\""
   meta=1
 }
 

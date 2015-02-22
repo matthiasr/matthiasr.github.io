@@ -9,4 +9,4 @@ author: "Matthias Rampke"
 
 
 
-[DailyBooth](http://dailybooth.com/) is going down. [Here](/posts/dailybooth-matthiasr/index.html) is the dump of my posts there.
+[DailyBooth](http://dailybooth.com/) is going down. [Here](/dailybooth-matthiasr/index.html) is the dump of my posts there.

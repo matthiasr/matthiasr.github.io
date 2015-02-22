@@ -1,4 +1,0 @@
-[[!meta title="pages tagged Freies-Wirtschaften"]]
-
-[[!inline pages="tagged(Freies-Wirtschaften)" actions="no" archive="yes"
-feedshow=10]]

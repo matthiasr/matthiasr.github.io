@@ -1,4 +1,0 @@
-[[!meta title="pages tagged bahn"]]
-
-[[!inline pages="tagged(bahn)" actions="no" archive="yes"
-feedshow=10]]

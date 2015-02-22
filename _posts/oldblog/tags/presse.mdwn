@@ -1,4 +1,0 @@
-[[!meta title="pages tagged presse"]]
-
-[[!inline pages="tagged(presse)" actions="no" archive="yes"
-feedshow=10]]

@@ -1,4 +1,0 @@
-[[!meta title="pages tagged re-publica08"]]
-
-[[!inline pages="tagged(re-publica08)" actions="no" archive="yes"
-feedshow=10]]

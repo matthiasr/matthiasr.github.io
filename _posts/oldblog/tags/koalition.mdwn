@@ -1,4 +1,0 @@
-[[!meta title="pages tagged koalition"]]
-
-[[!inline pages="tagged(koalition)" actions="no" archive="yes"
-feedshow=10]]

@@ -1,4 +1,0 @@
-[[!meta title="pages tagged usb"]]
-
-[[!inline pages="tagged(usb)" actions="no" archive="yes"
-feedshow=10]]

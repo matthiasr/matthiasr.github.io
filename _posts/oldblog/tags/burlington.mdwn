@@ -1,4 +1,0 @@
-[[!meta title="pages tagged burlington"]]
-
-[[!inline pages="tagged(burlington)" actions="no" archive="yes"
-feedshow=10]]

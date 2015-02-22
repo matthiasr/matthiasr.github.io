@@ -1,4 +1,0 @@
-[[!meta title="pages tagged boston"]]
-
-[[!inline pages="tagged(boston)" actions="no" archive="yes"
-feedshow=10]]

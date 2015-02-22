@@ -1,4 +1,0 @@
-[[!meta title="pages tagged bsd"]]
-
-[[!inline pages="tagged(bsd)" actions="no" archive="yes"
-feedshow=10]]

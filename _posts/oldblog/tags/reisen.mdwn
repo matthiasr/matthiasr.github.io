@@ -1,4 +1,0 @@
-[[!meta title="pages tagged reisen"]]
-
-[[!inline pages="tagged(reisen)" actions="no" archive="yes"
-feedshow=10]]

@@ -1,4 +1,0 @@
-[[!meta title="pages tagged lufthansa"]]
-
-[[!inline pages="tagged(lufthansa)" actions="no" archive="yes"
-feedshow=10]]

@@ -1,4 +1,0 @@
-[[!meta title="pages tagged randgruppe"]]
-
-[[!inline pages="tagged(randgruppe)" actions="no" archive="yes"
-feedshow=10]]

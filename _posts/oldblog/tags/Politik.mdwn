@@ -1,4 +1,0 @@
-[[!meta title="pages tagged Politik"]]
-
-[[!inline pages="tagged(Politik)" actions="no" archive="yes"
-feedshow=10]]

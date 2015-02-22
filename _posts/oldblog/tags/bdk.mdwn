@@ -1,4 +1,0 @@
-[[!meta title="pages tagged bdk"]]
-
-[[!inline pages="tagged(bdk)" actions="no" archive="yes"
-feedshow=10]]

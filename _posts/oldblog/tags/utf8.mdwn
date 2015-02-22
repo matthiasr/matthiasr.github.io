@@ -1,4 +1,0 @@
-[[!meta title="pages tagged utf8"]]
-
-[[!inline pages="tagged(utf8)" actions="no" archive="yes"
-feedshow=10]]

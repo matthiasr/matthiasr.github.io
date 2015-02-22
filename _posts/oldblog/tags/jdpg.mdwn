@@ -1,4 +1,0 @@
-[[!meta title="pages tagged jdpg"]]
-
-[[!inline pages="tagged(jdpg)" actions="no" archive="yes"
-feedshow=10]]

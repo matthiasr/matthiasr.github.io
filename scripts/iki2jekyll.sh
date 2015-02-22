@@ -1,9 +1,10 @@
 #!/bin/sh
 
 SCRIPT=$(cat <<'EOF'
-BEGIN {
+BEGINFILE {
   print "---"
   print "layout: post"
+  print "redirect_from: \"" gensub(/\.mdwn$/,"",1, FILENAME) "/\""
   meta=1
 }
 
@@ -38,7 +39,7 @@ fi
 doit() {
   while [ $# -gt 0 ];
   do
-    gawk "$SCRIPT" < "$1" > "_posts/$(date_for_file "$1")-$(basename "$1" .mdwn).md"
+    gawk "$SCRIPT" "$1" > "_posts/$(date_for_file "$1")-$(basename "$1" .mdwn).md"
     shift
   done
 }
@@ -48,5 +49,5 @@ then
   doit "$@"
 else
   cd $(dirname $(dirname $0))
-  find posts/ -name '*.mdwn' -print0 | xargs -0 "$0"
+  find posts -name '*.mdwn' -print0 | xargs -0 "$0"
 fi

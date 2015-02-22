@@ -1,0 +1,4 @@
+[[!meta title="pages tagged spd"]]
+
+[[!inline pages="tagged(spd)" actions="no" archive="yes"
+feedshow=10]]

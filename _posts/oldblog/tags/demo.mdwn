@@ -1,0 +1,4 @@
+[[!meta title="pages tagged demo"]]
+
+[[!inline pages="tagged(demo)" actions="no" archive="yes"
+feedshow=10]]

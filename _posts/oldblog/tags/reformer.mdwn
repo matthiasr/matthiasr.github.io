@@ -1,0 +1,4 @@
+[[!meta title="pages tagged reformer"]]
+
+[[!inline pages="tagged(reformer)" actions="no" archive="yes"
+feedshow=10]]

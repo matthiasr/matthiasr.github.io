@@ -1,0 +1,169 @@
+[[!meta title="DIY VPN with DragonFly, PF and OpenVPN"]]
+[[!meta author="Matthias Rampke"]]
+
+I have a server running [DragonFly](http://dragonflybsd.org) that I wanted to use as a VPN endpoint so I no longer have to rely on third-party VPNs jsut to get out of an insecure WiFi. These instructions, as they stand, will probably only work on Dragonfly ([NAT](http://en.wikipedia.org/NAT) syntax changed in OpenBSD recently; DragonFly uses [pf](http://www.openbsd.org/faq/pf/) from OpenBSD 4.4, FreeBSD 9 uses pf from OpenBSD 4.5).
+
+The first step was getting _pf_ up and running. All in all, the following ruleset worked for me:
+
+    ext_if="re0"
+    int_if= "{ tun0 tun1 }"
+
+    service_ports="{ http https xmpp-server xmpp-client auth ftp >49151 }"
+
+    #table <spamd> persist
+    #table <spamd-white> persist
+
+    # don't touch machine-local traffic
+    set skip on lo
+    set block-policy return
+
+    scrub in
+
+    # NAT
+    nat on $ext_if inet from 10.8.42.0/24 to any -> ($ext_if:0)
+
+    # filtering
+    block in
+    pass out quick inet keep state
+    pass out quick inet6 keep state
+
+    pass in on $ext_if proto tcp to ($ext_if) port ssh keep state
+
+    pass in on $ext_if proto tcp to ($ext_if) port $service_ports keep state
+
+    # allow ICMP
+    pass proto icmp keep state
+    pass proto icmp6 keep state
+
+    # OpenVPN
+    pass in on $ext_if proto udp to ($ext_if) port 1194:1195 keep state
+    pass in on $int_if keep state
+    pass on $int_if proto icmp keep state
+
+This already includes the rules to make the two VPNs work later on. Also, this ruleset it very lenient when it comes to both outgoing traffic and ICMP – everything is allowed there. I may or may not restrict this further in the future, but for now I mostly needed the NAT capabilities of pf. For some reason I needed to specify IPv4 and IPv6 rules separately, otherwise I'd get no IPv6 traffic out and lists didn't work either. Also, DragonFly's pf seems to have _no state_ as default.
+
+To activate pf, set
+
+    pf="YES"
+
+in _/etc/rc.conf_ and load it with
+
+    sudo /etc/rc.d/pf start
+
+When changing the ruleset, update it with
+
+    sudo /etc/rc.d/pf reload
+
+To get the server to actually do routing, set the sysctl _net.inet.ip.forwarding=1_ both in _/etc/sysctl.conf_ (so it is persistent) and (to avoid rebooting) directly:
+
+    sudo sysctl net.inet.ip.forwarding=1
+
+Next up is configuring the VPNs. I decided to create two separate networks, one being NATed through the server to the outside world, one just for connecting to services I don't want to expose publicly on the server (or possibly in the future, other VPN clients).
+
+First, install OpenVPN:
+
+    cd /usr/pkgsrc/net/openvpn; bmake install clean
+
+assuming you have [pkgsrc](http://pkgsrc.net/) already set up. Copy _/usr/pkg/share/examples/rc.d/openvpn_ to /usr/pkg/etc/rc.d and set _openvpn_enable="YES"_ in _rc.conf_.
+
+Create the OpenVPN keys using _easy-rsa_. Copy _/usr/pkg/share/openvpn/easy-rsa_ somewhere else, edit _vars_ in that copy to your liking, then run
+
+    . ./vars
+    ./build-dh
+    ./build-ca
+    ./build-key-server <server hostname>
+    ./build-key <client hostname>
+
+there to create a server and a client certificate. Also generate a TLS Auth key with
+    openvpn --genkey --secret ta.key
+and copy the dh????.pem, _<server hostname>.crt_, _ca.crt_ and _ta.key_ to _/usr/pkg/etc/openvpn_. If your client is a Mac with [Tunnelblick](http://code.google.com/p/tunnelblick/), copy the client certificate, client key, _ta.key_ and _ca.crt_ into a folder called _<server name>.tblk_ along with this configuration file (call it _config.ovpn_):
+
+    client
+
+    dev tun
+    proto udp
+
+    remote grade.so 1194
+
+    resolv-retry infinite
+    nobind
+    persist-key
+    persist-tun
+    ca ca.crt
+    cert <client name>.crt
+    key <client name>.key
+    ns-cert-type server
+
+    tls-auth ta.key 1
+
+    comp-lzo
+    verb 3
+
+The server-side side configuration goes into _/usr/pkg/etc/openvpn/server.conf_ and contains:
+
+    local <server IP> #this is optional
+
+    port 1194
+
+    proto udp
+
+    dev tun0
+
+    ca ca.crt
+    cert <server name>.crt
+    key <server name>.key
+
+    dh dh2048.pem
+    ;dh dh1024.pem # if you went for 1024 bit RSA
+
+    # this is the client IP range
+    # note that this is the same as the 'nat' line in pf.conf
+    server 10.8.42.0 255.255.255.0
+
+    ifconfig-pool-persist ipp.txt
+
+    # push default gateway to clients,
+    # telling them to redirect all traffic through the VPN
+    push "redirect-gateway def1 bypass-dhcp"
+
+    # push a good DNS server too
+    # if you don't the local, un-VPNed one might still be in use
+    push "dhcp-option DNS 8.8.8.8"
+
+    # we want clients to see each other
+    client-to-client
+
+    keepalive 10 120
+
+    tls-auth ta.key 0
+
+    comp-lzo
+
+    user nobody
+    group nobody
+
+    persist-key
+    persist-tun
+
+    status /var/log/openvpn-status.log
+
+    verb 3
+
+Start OpenVPN with _sudo /usr/pkg/etc/rc.d/openvpn start_ and you should be able to connect to the internet through the VPN (after you installed the client configuration of course).
+
+The configuration for the second VPN is very simple – just change the port to _1195_ in both client and server config (create copies), and in the server configuration file replace
+
+    # push default gateway to clients,
+    # telling them to redirect all traffic through the VPN
+    push "redirect-gateway def1 bypass-dhcp"
+
+    # push a good DNS server too
+    # if you don't the local, un-VPNed one might still be in use
+    push "dhcp-option DNS 8.8.8.8"
+
+with
+
+    # push only routes to other VPN clients and server IPs
+    push "route 10.8.0.0 255.255.0.0"
+
+so the clients know that everything in _10.8.0.0/16_ should go through the VPN. With this VPN you can connect to services bound e.g. to 10.8.42.1 on the server which you don't want to be reachable for outsiders.

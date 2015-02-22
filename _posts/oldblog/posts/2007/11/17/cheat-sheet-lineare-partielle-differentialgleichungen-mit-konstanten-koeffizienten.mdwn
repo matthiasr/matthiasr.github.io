@@ -1,0 +1,10 @@
+[[!meta  title="Cheat Sheet: Lineare Partielle Differentialgleichungen mit konstanten Koeffizienten"]]
+[[!meta  guid="http://www.matthias-rampke.de/2007/11/17/cheat-sheet-lineare-partielle-differentialgleichungen-mit-konstanten-koeffizienten/"]]
+[[!meta  date="2007-11-17 18:48:34"]]
+[[!meta  author="Matthias Rampke"]]
+<a href="http://www.matthias-rampke.de/wp-content/uploads/2007/11/cheatsheet-pdg-const.pdf" title="Cheat Sheet: Lineare Partielle Differentialgleichungen mit konstanten Koeffizienten">Download [PDF]</a>.
+
+Weil ich das momentan dauernd brauche und mein LaTeX recht eingerostet war.
+
+[[!taglink  Allgemein]]
+[[!taglink  mathe]]

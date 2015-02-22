@@ -1,0 +1,29 @@
+[[!meta  title="Sort servers by round trip time"]]
+[[!meta  guid="http://www.matthias-rampke.de/?p=125"]]
+[[!meta  date="2008-10-03 19:00:04"]]
+[[!meta  author="Matthias Rampke"]]
+A simple (and rather dumb) python script to sort a list of servers by round trip (aka. ping) time: <a href="wp-content/uploads/2008/10/serversort-01a.tbz">serversort 0.1a</a>.
+
+<strong>update: </strong> 0.1a. Fixed: NetBSD and OpenBSD have different versions of ping than FreeBSD. Why can't anyone ever agree on anything? 
+
+README below the fold.
+<!--more-->
+
+serversort 0.1a
+M.Rampke, 2008-10-03
+
+*Provided without any warranty*
+*Do what thou wilt shall be the whole of the Law.*
+
+This is a simple python script to sort a list of servers based on their ping time. Servers not responding within one second are ignored.
+
+The list of servers is read from serversort.txt, except otherwise specified on the command line. The sample serversort.txt contains a list of (mostly German) DNS servers compiled from various sources, including some duplicates. use with caution.
+
+The script relies on the operating system's ping command. I have tested it on Darwin (Mac OS X 10.5), FreeBSD (PC-BSD 7) and Linux (Ubuntu 8.04.1). It should work on Systems based on BSD, Darwin and Linux. Other systems will require modifications: if yours has a GNU or BSD userland, adjust the "sys.platform" tests. Otherwise add the appropriate pingcmd statement. If the round trip time is not printed in the max/avg/min/stddev format, regex magic will be required.
+
+
+
+[[!taglink  Allgemein]]
+[[!taglink  bsd]]
+[[!taglink  linux]]
+[[!taglink  programming]]

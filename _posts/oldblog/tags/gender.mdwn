@@ -1,0 +1,4 @@
+[[!meta title="pages tagged gender"]]
+
+[[!inline pages="tagged(gender)" actions="no" archive="yes"
+feedshow=10]]

@@ -1,0 +1,39 @@
+[[!meta  title="Die Systemantwort (vorl&#228;ufig)"]]
+[[!meta  guid="http://www.matthias-rampke.de/2008/01/12/die-systemantwort-vorlaeufig/"]]
+[[!meta  date="2008-01-11 23:19:39"]]
+[[!meta  author="Matthias Rampke"]]
+<em><a href="http://julia-seeliger.de/system/#comment-35192">Crosspost</a></em>
+
+Zum Wochenende noch ein paar (ausbauf&auml;hige) Gedanken von mir:
+
+Grunds&auml;tzlich sehe ich au&szlig;er Freiem Wirtschaften kein Wirtschaftssystem, das meinen Anspr&uuml;chen an eine liberale Gesellschaft entspr&auml;che. Erst einmal verstehe ich darunter die Freiheit, etwas, das ich[abstrakt] gemacht habe, zu jedem Preis abzugeben, den ich w&auml;hle.
+
+Weil die Welt aber so einfach nicht ist, sind dabei schon Einschr&auml;nkungen n&ouml;tig. Hier ist es jeweils wichtig (mehr oder weniger im Einzelnen) eine Abw&auml;gung zwischen dem gew&uuml;nschten Liberalismus und anderen Interessen (aka. Rechtsg&uuml;tern) zu treffen.
+<!--more-->
+Das betrifft u.a.:
+
+- gef&auml;hrliche G&uuml;ter wie Waffen etc., die wegen ihrer Gef&auml;hrlichkeit nicht frei (am besten gar nicht) gehandelt werden d&uuml;rfen
+
+- Dinge die ich erdacht habe (einschlie&szlig;lich Software usw.). Prinzipiell ist auch Kreativit&auml;t eine Leistung, f&uuml;r die ich Geld verlangen darf. Hier steht dem allerdings entgegen, dass a) die Schaffung neuen Wissens nur unter Verwendung vorhandenen Wissens funktioniert und b) die praktische M&ouml;glichkeit, Wissen unbeschr&auml;nkt zu vervielf&auml;ltigen, die nur k&uuml;nstlich durch Gesetze und technische Ma&szlig;nahmen beschr&auml;nkt werden kann (und wird).
+Ich denke nicht, dass Urheber- und Patentrechte abgeschafft werden sollten; ihre Frist sollte aber doch deutlich verk&uuml;rzt werden.
+
+- die Bereitstellung von Dienstleistungen und Waren, die f&uuml;r Freies Leben und Wirtschaften wichtig sind, muss (gegebenenfalls staatlich) sichergestellt sein. Das kann je nach Situation auf Angebots- oder Nachfrageseite passieren. Sprich: entweder sie werden direkt vom Staat bereitgestellt (Polizei) oder vom Staat bezahlt. Ein Beispiel f&uuml;r letzteres wurde schon genannt: Altenpflege. Ich[konkret] halte eine angemessene und w&uuml;rdevolle Versorgung im Alter (in jedem Alter, bei Bedarf) f&uuml;r ein Menschenrecht, dessen Erf&uuml;llung sich nicht daran bemessen darf, ob mensch es sich leisten kann.
+
+- in bestimmten Bereichen (die sich mit den eben angesprochenen teilweise &uuml;berdecken) gibt es nat&uuml;rliche Monopole, insbesondere bei Infrastruktur. Hier halte ich die Bereitstellung der Infrastruktur f&uuml;r eine im Kern &ouml;ffentliche Aufgabe; &uuml;ber diese Infrastruktur Waren bzw. Dienstleistungen anzubieten kann dann ggf. wieder privat erfolgen.
+
+Erst einmal meine ich[konkret] hier die Freiheit des/der Einzelnen - einige (viele) Aufgaben k&ouml;nnen aber nur durch die Kooperation Mehrerer erf&uuml;llt werden.
+
+"Firmen" sind daf&uuml;r m.E. nicht die ideale L&ouml;sung (die es aber wie immer nicht gibt). Zum einen entsteht durch die Trennung von Eigent&uuml;merIn(nen) und MitarbeiterInnen die schon die von einem gewissen Karl M. beschriebene Entfremdung von der eigenen Arbeit, zum Anderen sind solche Strukturen strukturell autorit&auml;r und leiden damit unter Kommunikationsproblemen (snafu - Untergebene erz&auml;hlen ihren Vorgesetzten tendenziell genau das, was die h&ouml;ren wollen, wodurch diese zunehmend den Kontakt zur Au&szlig;enwelt verlieren, was es noch schwerer macht, ihnen die Wahrheit zu sagen).
+
+Alternativen k&ouml;nnen Genossenschaften oder (zumindest im Bereich nicht-materieller Produktion) lose Netzwerke sein. Firmen als solche zu verbieten ist aber auch nicht zielf&uuml;hrend, weil zum Freien Wirtschaften nat&uuml;rlich auch die Freiheit geh&ouml;ren muss, unselbst&auml;ndige, bezahlte Arbeit aufzunehmen bzw. nachzufragen.
+
+Problematisch wird die Freiheit im Wirtschaften aber, wenn sie anf&auml;ngt, sich selbst einzuschr&auml;nken indem durch die Akkumulation von Kapital auch Macht akkumuliert wird, die dann wieder zur Mehrung des Kapitals verwendet werden kann (und wird). Das kann in Korporationen (also Firmen, aber auch Genossenschaften), aber auch bei Einzelnen passieren - und muss entsprechend regulatorisch unterbunden werden.
+
+Wichtig ist aber vor allem, dass das Wirtschaften - auch nicht das Freie - kein Grundwert ist. Im Zweifel wichtiger ist das Freie Leben in W&uuml;rde und ohne Not. In Freiheit und ohne Not hei&szlig;t f&uuml;r mich insbesondere, dass niemand unter Androhung von materiellem Mangel zu Arbeit gezwungen werden darf - und solange der Bedarf des t&auml;glichen Lebens nicht einfach unbegrenzt zur Verf&uuml;gung steht muss dies eben finanziell sichergestellt sein. Mensch k&ouml;nnte das als Grundeinkommen bezeichnen, wobei mir Auszahlungsmodalit&auml;ten eher egal sind, solange sie diesen Zweck erf&uuml;llen.
+
+In ganz-kurz-Fassung: Wirtschaft: nicht prim&auml;r; Markt: solange's hilft; Frei: unbedingt (aber eingeschr&auml;nkt).
+
+[[!taglink  das-Gro&szlig;e-Ganze]]
+[[!taglink  Freies-Wirtschaften]]
+[[!taglink  Politik]]
+[[!taglink  system]]

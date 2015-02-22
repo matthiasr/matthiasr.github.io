@@ -1,0 +1,4 @@
+[[!meta title="pages tagged Allgemein"]]
+
+[[!inline pages="tagged(Allgemein)" actions="no" archive="yes"
+feedshow=10]]

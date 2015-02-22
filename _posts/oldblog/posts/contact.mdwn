@@ -1,0 +1,16 @@
+[[!meta  title="Kontakt"]]
+[[!meta  guid="http://www.matthias-rampke.de/ueber-mich/kontakt/"]]
+[[!meta  date="2007-09-22 11:04:47"]]
+[[!meta  author="Matthias Rampke"]]
+E-Mail: <matthias@rampke.de> (GnuPG ID [[AE60D44B|data/ae60d44b.pub.asc]])
+
+Jabber: <matthias@rampke.de> (OTR fingerprint BD110B7F AF6A3958 FA115D1E 2C0EE5A7 1A6F8FE6)
+
+Skype: matthias.rampke
+
+Phone: +49 179 166 09 18
+
+[[vCard|data/kontakt.vcf]]
+
+
+[[!img data/kontakt.png link=data/kontakt.vcf]]

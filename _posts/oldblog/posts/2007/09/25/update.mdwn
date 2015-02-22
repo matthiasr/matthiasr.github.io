@@ -1,0 +1,10 @@
+[[!meta  title="Update"]]
+[[!meta  guid="http://www.matthias-rampke.de/2007/09/25/update/"]]
+[[!meta  date="2007-09-25 13:47:07"]]
+[[!meta  author="Matthias Rampke"]]
+Ich versuche mich jetzt mal am Update auf <a href="http://blog.wordpress-deutschland.org/2007/09/25/wordpress-23-veroeffentlicht.html" target="_blank">WP 2.3</a>. Mal sehen ob alles gutgeht...
+
+<strong>[update]</strong> scheint so.
+
+[[!taglink  Allgemein]]
+[[!taglink  wordpress]]

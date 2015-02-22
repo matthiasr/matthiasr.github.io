@@ -1,0 +1,17 @@
+[[!meta title="Bitrig"]]
+[[!meta author="Matthias Rampke"]]
+
+There's a [new BSD in town](http://bitrig.org) ([via](http://www.shiningsilence.com/dbsdlog/2012/06/13/9920.html)). The [first snapshot](http://mirror1.us.bitrig.org/release/snapshots/i386/20120614/) doesn't work out of the box, but there's a workaround:
+
+When booting from the [installer CD](http://mirror1.us.bitrig.org/release/snapshots/i386/20120614/cd01.iso) you will get errors like _uid 0 on /: file system full_ clogging up the screen right after the disk setup. Press _ctrl+Z_ to get to the shell, then
+
+    mv /tmp/* /mnt/tmp
+    rm -r /tmp
+    ln -s /mnt/tmp /tmp
+    fg
+
+This has to be done after the disk setup so the filesystems are already created and mounted.
+
+and installation will continue. Choose _http_ as install source and enter the server name _mirror1.us.bitrig.org_. It complained about the SHA256 sums of the downloaded files not matching what is expected, but it worked anyway.
+
+EDIT: Snapshots seem to be gone, can't find any currently. Dunno what's up with that…

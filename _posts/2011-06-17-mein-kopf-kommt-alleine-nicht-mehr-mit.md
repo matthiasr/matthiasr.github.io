@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/11/19/mein-kopf-kommt-alleine-nicht-mehr-mit/"
+guid: "http://rampke.de/posts/2009/11/19/mein-kopf-kommt-alleine-nicht-mehr-mit/"
 title: "Mein Kopf kommt alleine nicht mehr mit"
 guid: "http://www.matthias-rampke.de/?p=263"
 date: "2009-11-19 16:53:51"

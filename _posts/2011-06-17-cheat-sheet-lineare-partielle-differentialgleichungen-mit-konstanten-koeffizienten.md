@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/11/17/cheat-sheet-lineare-partielle-differentialgleichungen-mit-konstanten-koeffizienten/"
+guid: "http://rampke.de/posts/2007/11/17/cheat-sheet-lineare-partielle-differentialgleichungen-mit-konstanten-koeffizienten/"
 title: "Cheat Sheet: Lineare Partielle Differentialgleichungen mit konstanten Koeffizienten"
 guid: "http://www.matthias-rampke.de/2007/11/17/cheat-sheet-lineare-partielle-differentialgleichungen-mit-konstanten-koeffizienten/"
 date: "2007-11-17 18:48:34"

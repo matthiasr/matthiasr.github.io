@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/09/24/china-bockt/"
+guid: "http://rampke.de/posts/2007/09/24/china-bockt/"
 title: "China bockt"
 guid: "http://www.matthias-rampke.de/2007/09/24/china-bockt/"
 date: "2007-09-24 18:29:08"

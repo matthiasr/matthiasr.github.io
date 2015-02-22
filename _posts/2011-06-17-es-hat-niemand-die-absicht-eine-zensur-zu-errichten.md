@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/05/12/es-hat-niemand-die-absicht-eine-zensur-zu-errichten/"
+guid: "http://rampke.de/posts/2009/05/12/es-hat-niemand-die-absicht-eine-zensur-zu-errichten/"
 title: "Es hat niemand die Absicht, eine Zensur zu errichten"
 guid: "http://www.matthias-rampke.de/?p=211"
 date: "2009-05-12 06:07:31"

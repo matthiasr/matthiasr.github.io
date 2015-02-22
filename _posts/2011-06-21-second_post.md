@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/second_post/"
+guid: "http://rampke.de/posts/second_post/"
 ---
 {% include JB/setup %}
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/09/26/nachtsitzung/"
+guid: "http://rampke.de/posts/2007/09/26/nachtsitzung/"
 title: "Nachtsitzung"
 guid: "http://www.matthias-rampke.de/2007/09/26/nachtsitzung/"
 date: "2007-09-26 00:06:05"

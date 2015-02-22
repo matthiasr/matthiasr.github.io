@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/05/23/zum-grusswort-buko/"
+guid: "http://rampke.de/posts/2008/05/23/zum-grusswort-buko/"
 title: "Zum Gru&#223;wort-BuKo"
 guid: "http://www.matthias-rampke.de/?p=87"
 date: "2008-05-23 06:00:12"

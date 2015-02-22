@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/08/26/howto-installing-grml-11-on-an-encrypted-usb-stick/"
+guid: "http://rampke.de/posts/2008/08/26/howto-installing-grml-11-on-an-encrypted-usb-stick/"
 title: "HOWTO: Installing grml 1.1 on an encrypted USB stick"
 guid: "http://www.matthias-rampke.de/?p=94"
 date: "2008-08-26 00:04:01"

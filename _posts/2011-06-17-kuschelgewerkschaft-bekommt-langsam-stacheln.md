@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/11/21/kuschelgewerkschaft-bekommt-langsam-stacheln/"
+guid: "http://rampke.de/posts/2007/11/21/kuschelgewerkschaft-bekommt-langsam-stacheln/"
 title: "Kuschelgewerkschaft bekommt langsam Stacheln"
 guid: "http://www.matthias-rampke.de/2007/11/21/kuschelgewerkschaft-bekommt-langsam-stacheln/"
 date: "2007-11-21 19:42:42"

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/12/06/kommentare-bleiben-offen/"
+guid: "http://rampke.de/posts/2007/12/06/kommentare-bleiben-offen/"
 title: "Kommentare bleiben offen"
 guid: "http://www.matthias-rampke.de/2007/12/06/kommentare-bleiben-offen/"
 date: "2007-12-06 16:44:18"

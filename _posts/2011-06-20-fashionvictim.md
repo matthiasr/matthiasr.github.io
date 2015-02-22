@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/fashionvictim/"
+guid: "http://rampke.de/posts/fashionvictim/"
 title: "Technikfashionvictimhipster"
 ---
 {% include JB/setup %}

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/08/01/ferien-oder-so-was-in-der-art/"
+guid: "http://rampke.de/posts/2008/08/01/ferien-oder-so-was-in-der-art/"
 title: "Ferien, oder so was in der Art"
 guid: "http://www.matthias-rampke.de/?p=88"
 date: "2008-08-01 08:14:26"

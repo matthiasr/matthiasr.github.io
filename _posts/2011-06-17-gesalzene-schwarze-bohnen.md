@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2010/02/12/gesalzene-schwarze-bohnen/"
+guid: "http://rampke.de/posts/2010/02/12/gesalzene-schwarze-bohnen/"
 title: "Gesalzene Schwarze Bohnen"
 guid: "http://rampke.de/?p=316"
 date: "2010-02-12 16:58:38"

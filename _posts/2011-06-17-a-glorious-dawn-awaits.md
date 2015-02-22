@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/10/23/a-glorious-dawn-awaits/"
+guid: "http://rampke.de/posts/2009/10/23/a-glorious-dawn-awaits/"
 title: "A Glorious Dawn Awaits"
 guid: "http://www.matthias-rampke.de/?p=240"
 date: "2009-10-22 22:21:47"

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/02/25/schwarz-gruen-an-sich-denkbar-mit-basis-und-waehlern-nicht-machbar/"
+guid: "http://rampke.de/posts/2008/02/25/schwarz-gruen-an-sich-denkbar-mit-basis-und-waehlern-nicht-machbar/"
 title: "Schwarz-Gr&#252;n: An sich denkbar, mit Basis und W&#228;hlern nicht machbar"
 guid: "http://www.matthias-rampke.de/2008/02/25/schwarz-gruen-an-sich-denkbar-mit-basis-und-waehlern-nicht-machbar/"
 date: "2008-02-25 21:19:33"

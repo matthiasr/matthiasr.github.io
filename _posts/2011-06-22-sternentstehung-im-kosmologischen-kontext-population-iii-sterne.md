@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2010/06/30/sternentstehung-im-kosmologischen-kontext-population-iii-sterne/"
+guid: "http://rampke.de/posts/2010/06/30/sternentstehung-im-kosmologischen-kontext-population-iii-sterne/"
 title: "Sternentstehung im kosmologischen Kontext - Population-III-Sterne"
 guid: "https://rampke.de/?p=358"
 date: "2010-06-30 14:24:51"

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/10/28/technikprobleme/"
+guid: "http://rampke.de/posts/2007/10/28/technikprobleme/"
 title: "Technikprobleme"
 guid: "http://www.matthias-rampke.de/2007/10/28/technikprobleme/"
 date: "2007-10-28 18:23:27"

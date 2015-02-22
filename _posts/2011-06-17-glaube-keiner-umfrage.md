@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/11/17/glaube-keiner-umfrage/"
+guid: "http://rampke.de/posts/2007/11/17/glaube-keiner-umfrage/"
 title: "Glaube keiner Umfrage"
 guid: "http://www.matthias-rampke.de/2007/11/17/glaube-keiner-umfrage/"
 date: "2007-11-17 18:42:23"

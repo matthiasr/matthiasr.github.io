@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2009/04/20/bilder-von-der-usa-reise/"
+guid: "http://rampke.de/posts/2009/04/20/bilder-von-der-usa-reise/"
 title: "Bilder von der USA-Reise"
 guid: "http://www.matthias-rampke.de/?p=201"
 date: "2009-04-20 14:37:38"

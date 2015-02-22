@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2010/04/23/doing-the-math-the-train-that-never-stops/"
+guid: "http://rampke.de/posts/2010/04/23/doing-the-math-the-train-that-never-stops/"
 title: "Doing the Math: The train that never stops"
 guid: "https://rampke.de/?p=348"
 date: "2010-04-23 13:46:10"

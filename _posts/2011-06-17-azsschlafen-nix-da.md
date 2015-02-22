@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/10/03/azsschlafen-nix-da/"
+guid: "http://rampke.de/posts/2007/10/03/azsschlafen-nix-da/"
 title: "Ausschlafen? Nix da!"
 guid: "http://www.matthias-rampke.de/2007/10/03/azsschlafen-nix-da/"
 date: "2007-10-03 14:38:20"

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/08/23/selbstbildversuch/"
+guid: "http://rampke.de/posts/2008/08/23/selbstbildversuch/"
 title: "Selbstbildversuch"
 guid: "http://www.matthias-rampke.de/?p=89"
 date: "2008-08-23 18:49:37"

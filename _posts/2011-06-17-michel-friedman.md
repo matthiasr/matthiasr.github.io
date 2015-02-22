@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/11/02/michel-friedman/"
+guid: "http://rampke.de/posts/2007/11/02/michel-friedman/"
 title: "Michel Friedman"
 guid: "http://www.matthias-rampke.de/2007/11/02/michel-friedman/"
 date: "2007-11-02 07:46:59"

@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/12/04/sie-spielen-oder-sie-spielen-nicht/"
+guid: "http://rampke.de/posts/2007/12/04/sie-spielen-oder-sie-spielen-nicht/"
 title: "Sie spielen oder sie spielen nicht"
 guid: "http://www.matthias-rampke.de/2007/12/04/sie-spielen-oder-sie-spielen-nicht/"
 date: "2007-12-04 05:57:10"

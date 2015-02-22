@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/11/24/bundesdelegiertenkonferenz-in-nuernberg/"
+guid: "http://rampke.de/posts/2007/11/24/bundesdelegiertenkonferenz-in-nuernberg/"
 title: "Bundesdelegiertenkonferenz in N&#252;rnberg"
 guid: "http://www.matthias-rampke.de/2007/11/24/bundesdelegiertenkonferenz-in-nuernberg/"
 date: "2007-11-24 10:48:26"

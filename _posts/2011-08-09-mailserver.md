@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/mailserver/"
+guid: "http://rampke.de/posts/mailserver/"
 title: "Mailserver-Setup"
 author: "Matthias Rampke"
 ---

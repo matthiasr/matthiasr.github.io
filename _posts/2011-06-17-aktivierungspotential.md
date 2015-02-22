@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/09/22/aktivierungspotential/"
+guid: "http://rampke.de/posts/2007/09/22/aktivierungspotential/"
 title: "Aktivierungspotential"
 guid: "http://www.matthias-rampke.de/2007/09/22/aktivierungspotential/"
 date: "2007-09-22 16:24:53"

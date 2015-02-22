@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2011/01/20/netbsd-6-upgrade/"
+guid: "http://rampke.de/posts/2011/01/20/netbsd-6-upgrade/"
 title: "NetBSD-6: modules and system upgrades"
 guid: "http://rampke.de/?p=436"
 date: "2011-01-20 20:53:58"

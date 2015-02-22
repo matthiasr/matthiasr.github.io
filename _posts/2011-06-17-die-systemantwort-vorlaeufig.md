@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2008/01/12/die-systemantwort-vorlaeufig/"
+guid: "http://rampke.de/posts/2008/01/12/die-systemantwort-vorlaeufig/"
 title: "Die Systemantwort (vorl&#228;ufig)"
 guid: "http://www.matthias-rampke.de/2008/01/12/die-systemantwort-vorlaeufig/"
 date: "2008-01-11 23:19:39"

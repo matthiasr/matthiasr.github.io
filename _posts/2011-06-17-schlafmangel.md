@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/11/20/schlafmangel/"
+guid: "http://rampke.de/posts/2007/11/20/schlafmangel/"
 title: "Schlafmangel"
 guid: "http://www.matthias-rampke.de/2007/11/20/schlafmangel/"
 date: "2007-11-19 23:14:56"

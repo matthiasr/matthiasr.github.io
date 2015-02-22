@@ -1,6 +1,7 @@
 ---
 layout: post
 redirect_from: "posts/2007/11/21/buschbaum-will-erfreulich-normal/"
+guid: "http://rampke.de/posts/2007/11/21/buschbaum-will-erfreulich-normal/"
 title: "Buschbaum &amp; Will: erfreulich normal"
 guid: "http://www.matthias-rampke.de/2007/11/21/buschbaum-will-erfreulich-normal/"
 date: "2007-11-21 20:19:21"

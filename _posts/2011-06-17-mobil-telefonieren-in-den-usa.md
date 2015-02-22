@@ -1,0 +1,19 @@
+---
+layout: post
+redirect_from: "posts/2009/03/19/mobil-telefonieren-in-den-usa/"
+title: "Mobil telefonieren in den USA"
+guid: "http://www.matthias-rampke.de/?p=173"
+date: "2009-03-19 02:39:21"
+author: "Matthias Rampke"
+---
+{% include JB/setup %}
+
+In Deutschland mag die Telekom grade nicht den besten Ruf haben, hier (i.e. in/um Boston, MA, USA) ist T-Mobile dien beste L&ouml;sung, um kurzfristig mobil telefonieren zu k&ouml;nnen.
+In Deutschland mag die Telekom grade nicht den besten Ruf haben, hier (i.e. in/um Boston, MA, USA) ist T-Mobile dien beste L&ouml;sung, um kurzfristig mobil telefonieren zu k&ouml;nnen.
+
+In meinem O<sub>2</sub>-Vertrag kosten anrufen und angerufen werden jeweils 1.56 &euro;/min, abgerechnet wird im Minutentakt. Mein Handy kann mit dem amerikanischen GSM auf 850MHz und 1900MHz umgehen ("quad band"); "tri-band" (ohne 850MHZ) sollte mit Einschr&auml;nkungen auch gehen. SIM-Lock ist nat&uuml;rlich ein No-Go, Handys die mit O<sub>2</sub>-Vertrag kommen haben keinen.
+
+Die <a href="http://www.t-mobile.com/shop/plans/Prepaid-Plans.aspx">Prepaid-Plans</a> von <a href="http://www.t-mobile.com/">T-Mobile USA</a> sind deutschen Gewohnheiten recht &auml;hnlich (wie ees sich mit SMS verh&auml;lt, verstehe ich nicht so ganz) - telefonieren von &uuml;berall in den USA &uuml;berall in die USA. In der Pay-As-You-Go-Variante enth&auml;lt das <a href="http://www.t-mobile.com/shop/phones/Detail.aspx?class=prepaid&device=53299206-c069-429a-82fa-000007a2ac12">SIM Activation Kit</a> 10 Gespr&auml;chsminuten. F&uuml;r 10 US-$ kann man weitere 30 Minuten erwerben, die 90 Tage lang gelten. Da sollte f&uuml;r kurze Abstimmungen in ein paar Wochen Urlaub reichen.
+
+Um auf den Punkt zu kommen: bis einschlie&szlig;lich 30.3.2009 bin ich per Mail und unter +1-781-632-8956 erreichbar.
+

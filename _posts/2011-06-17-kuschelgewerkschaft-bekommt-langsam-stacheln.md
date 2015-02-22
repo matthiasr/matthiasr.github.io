@@ -1,0 +1,13 @@
+---
+layout: post
+redirect_from: "posts/2007/11/21/kuschelgewerkschaft-bekommt-langsam-stacheln/"
+title: "Kuschelgewerkschaft bekommt langsam Stacheln"
+guid: "http://www.matthias-rampke.de/2007/11/21/kuschelgewerkschaft-bekommt-langsam-stacheln/"
+date: "2007-11-21 19:42:42"
+author: "Matthias Rampke"
+---
+{% include JB/setup %}
+
+Bisher schien mir die Transnet ja eher Mehdorns Helferin denn eine richtige Gewerkschaft zu sein... aber durch den GDL-Streik scheint sich das langsam zu &auml;ndern. Im&nbsp;<a href="http://www.welt.de/wirtschaft/article1386495/Ich_habe_jetzt_wirklich_die_Faxen_dicke.html">Welt Online-Interview</a>&nbsp;macht Transnet-Chef Hansen zumindest verbal schon mal zumindest ein bisschen Druck.
+Bisher schien mir die Transnet ja eher Mehdorns Helferin denn eine richtige Gewerkschaft zu sein... aber durch den GDL-Streik scheint sich das langsam zu &auml;ndern. Im&nbsp;<a href="http://www.welt.de/wirtschaft/article1386495/Ich_habe_jetzt_wirklich_die_Faxen_dicke.html">Welt Online-Interview</a>&nbsp;macht Transnet-Chef Hansen zumindest verbal schon mal zumindest ein bisschen Druck.
+

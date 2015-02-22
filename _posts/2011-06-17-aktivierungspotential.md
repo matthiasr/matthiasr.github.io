@@ -1,0 +1,23 @@
+---
+layout: post
+redirect_from: "posts/2007/09/22/aktivierungspotential/"
+title: "Aktivierungspotential"
+guid: "http://www.matthias-rampke.de/2007/09/22/aktivierungspotential/"
+date: "2007-09-22 16:24:53"
+author: "Matthias Rampke"
+---
+{% include JB/setup %}
+
+<strong>14:16 </strong>SMS: "Er&ouml;ffnung thor steinar laden stoppen! Treffpunkt 15 uhr pinguin eisbar innenstadt! Bitte weiterleiten!".
+<strong>14:16 </strong>SMS: "Er&ouml;ffnung thor steinar laden stoppen! Treffpunkt 15 uhr pinguin eisbar innenstadt! Bitte weiterleiten!".
+
+<strong>15:00 </strong>Ein paar mehr oder weniger dunkel gekleidete <strike>Gestalten</strike> Menschen stehen in der Innenstadt herum; mensch raucht und wartet.
+
+<strong>15:10 </strong>Der Zug setzt sich in Bewegung; etwa 100 Personen skandieren "Alerta Antifascista" und "<a href="http://www.stoppnazilaeden.de.vu/" target="_blank">Sch&ouml;ner leben ohne Nazil&auml;den</a>".
+
+<strong>15:20</strong> Zwei Ecken weiter ist der Laden erreicht; ein paar Scheiben sind anscheinend schon vorher zu Bruch gegangen. Die Polizei ist &uuml;berrascht und &uuml;berfordert; die DemonstrantInnen kommen bis direkt an das gesch&auml;ft heran und werden erst durch Einsatz von Tr&auml;nengas zur&uuml;ckgetrieben.
+
+<strong>15:30 </strong>Der Zug geht um die Ecke und l&ouml;st sich auf; nebenan ist der Gro&szlig;teil der PolizistInnen noch damit besch&auml;ftigt sich die Panzerung anzulegen.
+
+Es ist schon beachtlich, welches Potential die Antifa innerhalb von einer Stunde mobilisieren kann.
+

@@ -1,0 +1,33 @@
+---
+layout: post
+redirect_from: "posts/2009/04/08/rucola-mit-tofu-balsamico-sauce/"
+title: "Rucola mit Tofu-Balsamico-Sauce"
+guid: "http://www.matthias-rampke.de/?p=191"
+date: "2009-04-08 18:56:41"
+author: "Matthias Rampke"
+---
+{% include JB/setup %}
+
+Ich versuche mich heute mal an etwas, wovon ich (fast) keine Ahnung habe: Kochen. Ich hatte heute mal wieder Lust auf gr&uuml;n statt <a href="http://mensaessen3.blogger.de/stories/1360403/">beige</a>, aber nat&uuml;rlich nix da und keine Lust am Ende viel rumliegen zu haben. Und weil das nicht zum erstenmal vorkommt hatte ich mir schonmal das hier &uuml;berlegt:
+Ich versuche mich heute mal an etwas, wovon ich (fast) keine Ahnung habe: Kochen. Ich hatte heute mal wieder Lust auf gr&uuml;n statt <a href="http://mensaessen3.blogger.de/stories/1360403/">beige</a>, aber nat&uuml;rlich nix da und keine Lust am Ende viel rumliegen zu haben. Und weil das nicht zum erstenmal vorkommt hatte ich mir schonmal das hier &uuml;berlegt:
+
+<a href="http://www.ipernity.com/doc/matthias-rampke/4549193"><img src="http://u1.ipernity.com/7/91/93/4549193.775bb9f0.500.jpg" width="500" height="375" alt="Rucola mit Tofu-Balsamico-Sauce" border="0" /></a>
+
+<strong>F&uuml;r:</strong> 2 Personen, oder 1 mit Hunger<br  />
+<strong>Dauer:</strong> 10 Minuten
+<strong>Zutaten:</strong> 
+<ul>
+	<li>1 Pkg. (125g) Rucola</li>
+	<li>1 Pkg. (250g) Tofu (eingelegt, ger&auml;uchert)</li>
+	<li>Oliven&ouml;l (normales tut's auch)</li>
+	<li>Balsamico-Essig</li>
+	<li>Pfeffer, evtl. Salz</li>
+</ul>
+
+Pfanne mit &Ouml;l kr&auml;ftig aufheizen, Tofu goldbraun anbraten. Solange den Rucola absp&uuml;len und abtropfen lassen. Wenn das Tofu kurz vor fertig ist, einige Bl&auml;tter Rucola etwas zerrupfen und mit anbraten, bis sie durch sind und wieder zusammenschrumpeln. Mit reichlich Balsamico abl&ouml;schen, Pfeffer und Salz dazu. Den Pfanneninhalt &uuml;ber den Rucola geben, dazu nach Geschmack frischen Balsamico (der in der Pfanne ist nach dem Abl&ouml;schen nicht mehr sauer). Rinnjehaun!
+
+<strong>Varianten:</strong> Der Rucola kann wahrscheinlich durch Feldsalat ersetzt werden, das Tofu durch Brotw&uuml;rfel, Halloumi oder Speck.
+
+<del datetime="2009-04-08T19:48:03+00:00">Jetzt hatte ich allerdings Hunger und nicht mitgedacht, deswegen kein Foto. Wird bei Gelegenheit nachgereicht.</del>
+Ich geh&ouml;re doch eher zur sehr hungrigen Sorte und hab mir die zweite Portion doch gleich noch zusammengeworfen. Jetzt also mit Bild.
+

@@ -1,0 +1,100 @@
+---
+layout: post
+redirect_from: "posts/cyanogenmod-milestone/"
+---
+{% include JB/setup %}
+
+# CyanogenMod auf dem Motorola Milestone installieren #
+# CyanogenMod auf dem Motorola Milestone installieren #
+
+_**Archiv:**_ das hier hatte ich mal in meinen ersten Gehversuch mit [ikiwiki][ikiwiki] gepostet, der inzwischen den Weg alles zeitlichen gegangen ist. Da es aber anscheinend immer noch Menschen gibt, die noch nicht auf CyanogenMod umgestiegen sind, aber es doch mal tun wollen, hab ich das mal wieder ausgegraben. Die Infos da drin, insbesondere die Softwareversionen, sind nicht mehr alle aktuell. Ich fahre im Moment mit [Cyanogenmod 7][cm7], die Builds dazu liegen [hier][cm7builds], die aktuellen Google-Apps-Bündel sind immer auf der [CM7-Seite][cm7] verlinkt. Allerdings ist das Milestone mit CyanogenMod 7 auch ein bisschen überfordert – mit der heute aktuellen Version ([7.1.1][cm711]) geht die Kamera wieder halbwegs, vorher hat sie nach minutenlangem Einfrieren regelmäßig sich oder das ganze System zum Absturz gebracht. Gleichzeitig Musik hören und Google Maps aufrufen geht immer noch nicht. Aber dafür ist es eben der neueste heiße Scheiß :)
+
+[ikiwiki]: http://ikiwiki.info/ (ikiwiki)
+[cm7]: http://android.doshaska.net/cm7 (CyanogenMod 7 für das Milestone)
+[cm7builds]: https://github.com/nadlabak/android/downloads (Builds von CyanogenMod 7 für das Milestone)
+[cm711]: https://github.com/downloads/nadlabak/android/update-cm-7.1.1-Milestone-KANG-signed.zip (CyanogenMod 7.1.1 for Milestone)
+
+Diese Anleitung basiert im wesentlichen auf [jener][cm-faq], soll aber weniger (möglichst kein) Vorwissen voraussetzen.
+
+**Disclaimer:** Ich schreibe hier auf, was für mich funktioniert hat, ohne Anspruch auf Vollständigkeit oder Korrektheit. Theoretisch ist es möglich, damit aus dem Milestone einen sehr teuren Briefbeschwerer zu machen ("bricken", von engl. brick: Ziegelstein). Praktisch sollte das ziemlich schwer sein, und da wir den Bootloader selbst nicht überschreiben kann in aller Regel immer noch zumindest eine [komplett neue Software][fullsbf] [geflasht][debrick] werden. Wie immer gilt also: *Alles **Ohne Gewähr** und **auf eigene Gefahr**!*
+
+[debrick]: http://www.android-hilfe.de/anleitungen-fuer-motorola-milestone/17891-how-fehlerbehebung-bei-brick-neu-flashen.html (How-To: Fehlerbehebung bei "brick" und neu flashen)
+[fullsbf]: http://www.android-hilfe.de/root-hacking-modding-fuer-motorola-milestone/20977-download-sammlung-fortsetzung.html#post229013 "Milestone FULL SBFs"
+
+**Achtung:** das Folgende spielt sich im Wesentlichen im Bootloader und Recovery-Modus ab. Dabei nimmt das Milestone keinen Strom über das Kabel an, der Akku sollte also besser voll geladen sein!
+
+**Wichtig:** **Es werden alle Daten auf dem Telefon (aber nicht die auf der SD-Karte) gelöscht, insbesondere alle installierten Programme und deren Einstellungen und Daten, alle Kontakte (sofern nicht mit dem Google-Konto gesynct) usw. usf.** – gegebenenfalls sollten sie gesichert werden, etwa mit [Titanium Backup][titanium] aus dem Market. Dafür muss das Telefon gerootet werden, was aus dem OpenRecovery-Menü möglich ist. Ich habe mich aber dafür entschieden, alles neu einzurichten.
+
+[titanium]: http://matrixrewriter.com/android/ "Titanium Backup for Android"
+
+## Die Situation ##
+Nach endlos langer Zeit ist Motorola endlich mit dem Update auf Android 2.2 (Froyo) für das Milestone fertig geworden – und es ist [Schrott][schrott]. Gleichzeitig gibt es aber endlich eine (inoffizielle) Version von [CyanogenMod][cm] [für das Milestone][cm6]. Da der Bootloader des Milestone nur signierte Kernel akzeptiert, muss hier ein bisschen getrickst werden, weshalb es wohl vorerst auch keinen offiziellen CyanogenMod geben wird.
+
+Mit dem Update auf CyanogenMod 6 läuft mein Telefon schneller, stabiler, länger und kann mehr (etwa Apps auf die SD-Karte installieren). Das einzige Problem, das ich hatte, war dass der WLAN-Treiber in CM6 einen Fehler hat und unter gewissen Umständen beim Verbindungsaufbau ein Paket zwei mal schickt, mit dem die Fähigkeiten von Telefon und Basisstation ausgehandelt werden sollen. Dadurch konnte ich mich nicht mit meinem OpenWRT-Router verbinden, da dieser den Verbindungsaufbau daraufhin sofort abbrach. Als Workaround kann im Router WMM/WME abgeschaltet werden[^wmm-disable].
+
+[cm]: http://www.cyanogenmod.com/ "CyanogenMod"
+[cm-faq]: https://www.droid-developers.org/wiki/CyanogenMod_4_Milestone_FAQ "FAQ"
+[cm6]: http://android.doshaska.net/cm6 "CyanogenMod 6 für Motorola Milestone"
+[wme]: http://en.wikipedia.org/wiki/Wireless_Multimedia_Extensions "Wireless Multimedia Extensions"
+[schrott]: http://www.heise.de/mobil/meldung/Motorola-stellt-Milestone-Update-bereit-1210788.html "Heise-Meldung"
+[^wmm-disable]: Dazu in `/lib/wifi/mac80211.sh` die Zeile `wmm_enabled=1` auf `wmm_enabled=0` ändern.
+
+## *OpenRecovery* installieren ##
+### *Vulnerable Recovery* einspielen ###
+
+Neben dem eigentlichen Android hat das Milestone auch einen *Recovery-Modus*, aus dem heraus unter anderem Over-The-Air-Updates eingespielt werden. Der Recovery-Modus kann gestartet werden, indem man das Telefon ausschaltet und dann (je nach Version) die `x`- oder die Kamerataste hält und es wieder einschaltet. Wenn das Warndreieck erscheint, diese Taste loslassen, die Lautstärke-nach-oben-Taste halten und die Kamerataste drücken. Dann erscheint das Recovery-Menü mit der Option `apply sdcard:update.zip` lässt sich ein signiertes Update einspielen, das zuvor als `update.zip` ins Hauptverzeichnis der SD-Karte gelegt wurde. Die Menüs lassen sich über die Richtungstasten der Hardwaretastatur (*D-Pad*) bedienen und durch den Mittelknopf der selben auswählen.
+
+Die ersten Android-Versionen für das Motorola Milestone (2.0.0 und 2.0.1) hatten einen Fehler in dieser Recovery-Software, der es u.A. ermöglichte das Telefon zu rooten. Dabei wurde die Signatur des `update.zip` von vorne bis zur Endmarkierung des zip-Formats geprüft, das Archiv aber (bedingt durch das `zip`-Format) von hinten entpackt – es war also möglich, ein beliebiges "Update" einzuspielen, solange ihm ein signiertes echtes Update voranging, und so beispielsweise den Root-Zugang herzustellen.
+
+In den letzten Android-Versionen ist diese Lücke geschlossen, lässt sich aber durch Einspielen einer älteren Recovery-Version wiederherstellen. Dazu benötigt man einen Windows-Rechner (oder eine virtuelle Maschine mit Windows und USB-Zugriff), die [Motorola USB Drivers (for Windows®)][driver], das Motorola-Flash-Tool [RSD Lite][rsdlite][^sbflasher] und das [Recovery-Only-SBF][recovery-sbf], das das verwundbare Recovery-Image im Motorola-Flash-Image-Format enthält, aber ein komplettes Downgrade auf eine ältere Android-Version erspart.
+
+Dann kann's los gehen:
+
+1. die Treiber installieren
+2. RSD Lite installieren
+3. Milestone ausschalten
+4. auf dem D-Pad die Hoch-Taste (in der Orientierung der Tastatur) festhalten und Telefon einschalten. Damit wird es in den *Bootloader*-Modus gebracht, in dem Flash-Images von außen eingespielt werden können.
+5. wenn auf dem Bildschirm erscheint `OK to Program, Connect USB Data Cable` das Telefon an den Computer anschließen und dort RSD Lite starten. **Achtung**: RSD Lite muss mit Administratorrechten gestartet werden, dazu vor dem Starten auf die Programmverknüpfung rehtsklicken und unter *Eigenschaften->Kompatibilität* das entsprechende Häkchen setzen.
+6. unter `...` das Recovery-SBF auswählen, in der Liste unten das Milestone, und auf "Starten" klicken
+7. im Laufe des Flashens muss das Telefon einmal *in den Bootloader-Modus* neustarten. In der Theorie soll das wohl von selbst passieren, bei mir bootete das Telefon aber immer normal. In diesem Fall einfach noch einmal auschalten und wie oben beschrieben den Bootloader starten. Daraufhin wird der Erfolg des Flashens verifiziert und die Anzeige in der `Progress`-Spalte der Geräteliste wechselt zu `Finished`.
+
+Damit ist die (zu unseren Gunsten) fehlerhafte Recovery-Software wieder eingespielt.
+
+[driver]: http://www.motorola.com/Support/US-EN/Support-Homepage/Software_and_Drivers/USB-and-PC-Charging-Drivers "Motorola USB Drivers (for Windows®)"
+[rsdlite]: http://www.tucows.com/preview/853731 "RSD Lite"
+[recovery-sbf]: http://depositfiles.com/de/files/absmkocvs  "Recovery-Only SBF"
+[^sbflasher]: Es gibt wohl auch eine [http://blog.opticaldelusion.org/2010_05_01_archive.html](Linux-Software), die ich aber nicht ausprobiert habe.
+
+### OpenRecovery ###
+
+Als nächstes wird [Androidiani OpenRecovery][openrec] installiert. Dazu einfach die `.zip`-Datei auf die SD-Karte installieren. Dort sollten dann ein `update.zip` und ein Verzeichnis `OpenRecovery` existieren. Bei der Gelegenheit kopieren wir auch gleich das [CyanogenMod-6-Update][cm6-update] (`update-cm-6.….zip`) und die [Google Apps][gapps] (die aus Lizenzgründen nicht mit CyanogenMod verteilt werden dürfen). Wir benötigen die [HDPI-Version für CM6][gapps-cm6-hdpi]. Beide Dateien müssen in das Verzeichnis `OpenRecovery/updates`.
+
+Um OpenRecovery zu starten booten wir zuerst in den (nun verletzlichen) Recovery-Modus (`x` oder Kamerataste halten, Lauter-Taste halten und Kamerataste drücken) und wählen `apply sdcard:update.zip` aus. Hierbei wird nicht wirklich ein Update eingespielt, sondern durch das untergeschobene `update.zip` OpenRecovery gestartet[^eocd].
+
+[openrec]: http://code.google.com/p/androidiani-openrecovery/downloads/list "Androidiani OpenRecovery"
+[gapps]: http://wiki.cyanogenmod.com/index.php?title=Latest_Version/Google_Apps "Google Apps for CyanogenMod"
+[gapps-cm6-hdpi]: http://android.d3xt3r01.tk/cyanogen/gapps/gapps-hdpi-20101114-signed.zip "Google Apps for CyanogenMod, Version für das Motorola Milestone"
+[^eocd]: Falls nun eine Fehlermeldung betreffend eines `EOCD marker` erscheint, wurde das verwundbare Recovery-Image nicht richtig eingespielt. Try again!
+
+## *CyanogenMod* einspielen ##
+
+Wenn die `.zip`-Dateien für CyanogenMod 6 und die Google Apps in `OpenRecovery/updates` liegen, kann das eigentliche Update beginnen.
+
+Nun zum updaten folgende Menüpunkte auswählen:
+
+1. `Wipe Dalvik Cache`
+2. `Wipe Cache Partition`
+3. `Wipe Data / Factory Reset` **Hierbei werden alle Daten gelöscht!**
+4. `Apply Update`
+5. `update-cm-6.….zip`
+6. `gapps-hdpi-…-signed.zip`
+
+Damit sind CyanogenMod 6 und die Google Apps installiert!
+
+### Tastaturlayout anpassen ###
+
+Für das deutsche Milestone stimmt allerdings die Tastaturbelegung noch nicht, auch das lässt sich aber aus OpenRecovery heraus ändern. Dazu muss man zurück ins Hauptmenü (`Go Back`) und dort unter `Settings`, `Keyboard Layout` `qwertz` auswählen.
+
+## Glückwunsch! ##
+
+Das war's, jetzt einfach im Hauptmenü "Reboot" auswählen und CyanogenMod startet.

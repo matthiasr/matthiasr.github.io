@@ -129,3 +129,6 @@ JB :
 
 gems:
   - jekyll-redirect-from
+
+paginate: 5
+paginate_path: index:num

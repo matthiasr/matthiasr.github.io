@@ -70,6 +70,7 @@ JB :
   #
   atom_path : /index.atom
   rss_path : /index.rss
+  archive_path : /archive.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.

@@ -9,3 +9,11 @@ html {
 a {
   color: white;
 }
+
+img.icon {
+  width: 1em;
+}
+
+img#linkedin {
+  filter: grayscale(100%) brightness(400%);
+}
